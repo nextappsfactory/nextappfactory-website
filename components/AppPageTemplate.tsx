@@ -21,6 +21,7 @@ export interface AppPageConfig {
   privacyUrl: string
   supportUrl: string
   homeUrl: string
+  contactEmail: string
   pricing?: {
     free: string[]
     paid?: { price: string; label: string; perks: string[] }
@@ -34,7 +35,7 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
       {/* ── NAV ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          <Link href="http://hugeappfactory.com"
+          <Link href="http://nextappfactory.com"
             className="flex items-center gap-2 text-sm text-gray-400 hover:text-gray-900 transition-colors">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -49,6 +50,7 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
           </div>
 
           <div className="flex items-center gap-4 text-sm text-gray-400">
+            <a href={`mailto:${app.contactEmail}`} className="hover:text-gray-900 transition-colors hidden sm:block">Contact</a>
             <Link href={app.supportUrl} className="hover:text-gray-900 transition-colors hidden sm:block">Support</Link>
             <Link href={app.privacyUrl} className="hover:text-gray-900 transition-colors hidden sm:block">Privacy</Link>
             <a href={app.appStoreUrl || '#'}
@@ -196,6 +198,19 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
           </div>
         </section>
       )}
+
+      {/* ── CONTACT ── */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-3">Get in touch</h2>
+          <p className="text-gray-400 text-sm mb-6">Questions, feedback, or bug reports? We read every message.</p>
+          <a href={`mailto:${app.contactEmail}`}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white transition-all hover:opacity-90"
+            style={{ background: app.gradient }}>
+            📧 {app.contactEmail}
+          </a>
+        </div>
+      </section>
 
       {/* ── DOWNLOAD CTA ── */}
       <section className="py-20 px-6">

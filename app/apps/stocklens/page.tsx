@@ -11,9 +11,10 @@ export default function StockLensPage() {
       accentColor: '#0EA5E9',
       lightBg: '#EFF6FF',
       category: 'Finance',
-      homeUrl: 'http://stocklens.hugeappfactory.com',
-      privacyUrl: 'http://stocklens.hugeappfactory.com/privacy',
-      supportUrl: 'http://stocklens.hugeappfactory.com/support',
+      homeUrl: 'http://stocklens.nextappfactory.com',
+      privacyUrl: 'http://stocklens.nextappfactory.com/privacy',
+      supportUrl: 'http://stocklens.nextappfactory.com/support',
+      contactEmail: 'contact@stocklens.nextappfactory.com',
       features: [
         { icon: '📈', title: 'Real-Time Quotes', desc: 'Live stock prices and market data updated instantly so you never miss a move.' },
         { icon: '📂', title: 'Portfolio Tracking', desc: 'Track all your holdings in one place and see your total performance at a glance.' },

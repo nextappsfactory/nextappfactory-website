@@ -9,7 +9,7 @@ const faqs = [
   { q: 'How do I set a price alert?', a: 'Navigate to the stock\'s detail page, tap "Set Alert," and enter your target price. You\'ll receive a push notification when the price is reached.' },
   { q: 'The app is crashing — what should I do?', a: 'Try force-quitting the app and reopening it. If the issue persists, delete and reinstall the app. Your watchlist data will be restored from your device backup.' },
   { q: 'How do I restore a purchase?', a: 'Go to Settings within the app and tap "Restore Purchases." Make sure you are signed in with the same Apple ID used for the original purchase.' },
-  { q: 'I have a feature request.', a: 'We\'d love to hear it! Send us an email at admin@hugeappfactory.com with the subject line "StockLens Feature Request."' },
+  { q: 'I have a feature request.', a: 'We\'d love to hear it! Send us an email at admin@nextappfactory.com with the subject line "StockLens Feature Request."' },
 ]
 
 export default function StockLensSupportPage() {
@@ -19,9 +19,9 @@ export default function StockLensSupportPage() {
         appName="StockLens"
         accentColor="#0ea5e9"
         gradient="linear-gradient(135deg, #0ea5e9, #6366f1)"
-        homeUrl="http://stocklens.hugeappfactory.com"
-        privacyUrl="http://stocklens.hugeappfactory.com/privacy"
-        supportUrl="http://stocklens.hugeappfactory.com/support"
+        homeUrl="http://stocklens.nextappfactory.com"
+        privacyUrl="http://stocklens.nextappfactory.com/privacy"
+        supportUrl="http://stocklens.nextappfactory.com/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">
@@ -49,7 +49,7 @@ export default function StockLensSupportPage() {
             <div className="text-sm text-gray-500">Send us an email and we'll respond within 1–2 business days.</div>
           </div>
           <a
-            href="mailto:admin@hugeappfactory.com?subject=StockLens Support"
+            href="mailto:admin@nextappfactory.com?subject=StockLens Support"
             className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white whitespace-nowrap shadow-sm"
             style={{ background: 'linear-gradient(135deg, #0ea5e9, #6366f1)' }}
           >

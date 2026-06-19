@@ -11,9 +11,10 @@ export default function FlipScoutPage() {
       accentColor: '#10B981',
       lightBg: '#ECFDF5',
       category: 'Real Estate',
-      homeUrl: 'http://flipscout.hugeappfactory.com',
-      privacyUrl: 'http://flipscout.hugeappfactory.com/privacy',
-      supportUrl: 'http://flipscout.hugeappfactory.com/support',
+      homeUrl: 'http://flipscout.nextappfactory.com',
+      privacyUrl: 'http://flipscout.nextappfactory.com/privacy',
+      supportUrl: 'http://flipscout.nextappfactory.com/support',
+      contactEmail: 'contact@flipscout.nextappfactory.com',
       features: [
         { icon: '📸', title: 'Property Scanner', desc: 'Use your camera to photograph and log properties on the spot.' },
         { icon: '💰', title: 'Profit Calculator', desc: 'Enter purchase price, repair costs, and ARV to instantly see your estimated profit.' },

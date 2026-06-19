@@ -36,7 +36,7 @@ const sections = [
   },
   {
     title: 'Contact',
-    body: `For questions about these Terms, contact us at admin@hugeappfactory.com.`,
+    body: `For questions about these Terms, contact us at admin@nextappfactory.com.`,
   },
 ]
 
@@ -55,7 +55,7 @@ export default function TermsPage() {
         <div className="max-w-2xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-8 shadow-sm space-y-8">
           <p className="text-gray-500 text-sm leading-relaxed">
             These Terms of Service govern your use of the Huge App Factory LLC website located at
-            hugeappfactory.com and all related apps and services offered by Huge App Factory LLC.
+            nextappfactory.com and all related apps and services offered by Huge App Factory LLC.
           </p>
 
           {sections.map((s) => (

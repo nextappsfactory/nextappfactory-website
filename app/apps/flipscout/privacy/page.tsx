@@ -7,7 +7,7 @@ const sections = [
   { title: 'Property Data', body: 'All property records, calculations, and notes you create in FlipScout are stored on your device. We do not have access to your deal data.' },
   { title: 'Analytics', body: 'We may collect anonymous, aggregate usage data (such as feature usage frequency) to improve the app. This data cannot be used to identify you.' },
   { title: 'In-App Purchases', body: 'Any purchases are processed entirely by Apple through the App Store. We do not receive or store your payment information.' },
-  { title: 'Contact', body: 'For privacy questions related to FlipScout, email us at admin@hugeappfactory.com.' },
+  { title: 'Contact', body: 'For privacy questions related to FlipScout, email us at admin@nextappfactory.com.' },
 ]
 
 export default function FlipScoutPrivacyPage() {
@@ -17,9 +17,9 @@ export default function FlipScoutPrivacyPage() {
         appName="FlipScout"
         accentColor="#10b981"
         gradient="linear-gradient(135deg, #10b981, #059669)"
-        homeUrl="http://flipscout.hugeappfactory.com"
-        privacyUrl="http://flipscout.hugeappfactory.com/privacy"
-        supportUrl="http://flipscout.hugeappfactory.com/support"
+        homeUrl="http://flipscout.nextappfactory.com"
+        privacyUrl="http://flipscout.nextappfactory.com/privacy"
+        supportUrl="http://flipscout.nextappfactory.com/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">

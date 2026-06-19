@@ -1,285 +1,726 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
-const apps = [
+/* ─── App data ──────────────────────────────────────────────── */
+const APPS = [
   {
     slug: 'stocklens',
     name: 'StockLens',
-    description: 'Smart portfolio management and real-time market insights for investors.',
-    icon: '📊',
-    gradient: 'linear-gradient(135deg, #0EA5E9, #6366F1)',
+    tagline: 'Smart stock tracking and portfolio analysis.',
     category: 'Finance',
-    url: 'http://stocklens.hugeappfactory.com',
+    icon: '📊',
+    color: '#0EA5E9',
+    gradient: 'linear-gradient(135deg, #0EA5E9 0%, #6366F1 100%)',
+    lightBg: '#EFF6FF',
+    price: '$4.99',
+    priceLabel: 'one-time',
+    href: 'http://stocklens.nextappfactory.com',
+    features: [
+      'Real-time stock & ETF quotes',
+      'Custom price alerts',
+      'Portfolio tracking & charts',
+      'Unlimited watchlists',
+    ],
+    mockup: {
+      title: 'Portfolio',
+      value: '$24,891',
+      delta: '+$582 today',
+      deltaUp: true,
+      rows: [
+        { t: 'AAPL', v: '$8,420', c: '+1.2%', up: true },
+        { t: 'NVDA', v: '$6,210', c: '+3.8%', up: true },
+        { t: 'MSFT', v: '$5,180', c: '-0.4%', up: false },
+      ],
+    },
   },
   {
     slug: 'flipscout',
     name: 'FlipScout',
-    description: 'Find, evaluate, and profit from real estate flip opportunities near you.',
-    icon: '🏠',
-    gradient: 'linear-gradient(135deg, #10B981, #059669)',
+    tagline: 'Instant property profit analysis on the spot.',
     category: 'Real Estate',
-    url: 'http://flipscout.hugeappfactory.com',
+    icon: '🏠',
+    color: '#10B981',
+    gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+    lightBg: '#ECFDF5',
+    price: '$6.99',
+    priceLabel: 'one-time',
+    href: 'http://flipscout.nextappfactory.com',
+    features: [
+      'Instant profit & ROI calculator',
+      'After Repair Value estimation',
+      'Save & compare properties',
+      'Camera-based deal logging',
+    ],
+    mockup: null,
   },
   {
-    slug: 'truthordare',
-    name: 'Truth or Dare',
-    description: 'The ultimate party game with 500+ prompts across 5 hilarious categories.',
-    icon: '🎲',
-    gradient: 'linear-gradient(135deg, #F43F5E, #E11D48)',
-    category: 'Games',
-    url: 'http://truthordare.hugeappfactory.com',
-  },
-  {
-    slug: 'simpletodo',
-    name: 'Simple-toDo',
-    description: 'Minimal, distraction-free task management built for focused people.',
-    icon: '✅',
-    gradient: 'linear-gradient(135deg, #A855F7, #7C3AED)',
-    category: 'Productivity',
-    url: 'http://simpletodo.hugeappfactory.com',
-    comingSoon: true,
+    slug: 'tomescout',
+    name: 'TomeScout',
+    tagline: 'Scan books, see buyback prices, flip for profit.',
+    category: 'Books & Resale',
+    icon: '📚',
+    color: '#F59E0B',
+    gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+    lightBg: '#FFFBEB',
+    price: 'Free',
+    priceLabel: '+ $4.99 unlock',
+    href: 'http://tomescout.nextappfactory.com',
+    features: [
+      'Barcode scanner — instant results',
+      'Live buyback prices from Amazon & eBay',
+      'Profit calculator with fee estimates',
+      'Book inventory tracker',
+    ],
+    mockup: null,
   },
 ]
 
-const stats = [
-  { value: '50+', label: 'APPS SHIPPED', icon: '📱', iconBg: '#EDE9FE', iconColor: '#7C3AED' },
-  { value: '10M+', label: 'DOWNLOADS', icon: '⬇️', iconBg: '#E0F2FE', iconColor: '#0EA5E9' },
-  { value: '120+', label: 'COUNTRIES', icon: '🌍', iconBg: '#D1FAE5', iconColor: '#10B981' },
-]
-
-const features = [
+const REVIEWS = [
   {
-    icon: '💎',
-    iconBg: '#EDE9FE',
-    title: 'Quality',
-    desc: 'Crafted with precision and care. Every pixel and interaction is optimized for the best possible user experience.',
+    name: 'Marcus T.',
+    handle: '@marcust_dev',
+    app: 'StockLens',
+    appColor: '#0EA5E9',
+    text: 'Finally a stock tracker that doesn\'t feel like a Bloomberg terminal. Clean, fast, and no subscription fees.',
   },
   {
-    icon: '🛡️',
-    iconBg: '#DBEAFE',
-    title: 'Privacy',
-    desc: "Your data stays yours, always. We implement bank-grade security protocols to ensure complete peace of mind.",
+    name: 'Sarah K.',
+    handle: '@sarahkflips',
+    app: 'FlipScout',
+    appColor: '#10B981',
+    text: 'I use FlipScout on every property walk. The profit calculator alone saved me from two bad deals this month.',
   },
   {
-    icon: '🔄',
-    iconBg: '#D1FAE5',
-    title: 'Free Updates',
-    desc: 'Continuous improvements for life. We regularly ship new features and optimizations to keep apps feeling fresh.',
+    name: 'Alex R.',
+    handle: '@alexr_ios',
+    app: 'StockLens',
+    appColor: '#0EA5E9',
+    text: 'Switched from three different apps to just StockLens. Everything I need, nothing I don\'t. Night mode is gorgeous.',
   },
 ]
 
+const MARQUEE_ITEMS = [
+  'SwiftUI', 'Native iOS', 'No Subscriptions', 'Privacy First',
+  'App Store Ready', 'Dark Mode', 'Offline Support', 'Indie Studio',
+  'Swift 5.9', 'Real-Time Data',
+  'SwiftUI', 'Native iOS', 'No Subscriptions', 'Privacy First',
+  'App Store Ready', 'Dark Mode', 'Offline Support', 'Indie Studio',
+  'Swift 5.9', 'Real-Time Data',
+]
+
+/* ─── Component ─────────────────────────────────────────────── */
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div style={{ background: '#fff' }}>
       <Header />
 
-      {/* ── HERO ── */}
-      <section className="pt-24 pb-6 px-6 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[540px]">
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  HERO                                                    ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <section
+        style={{
+          background: '#07050F',
+          minHeight: '100vh',
+          position: 'relative',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        {/* Background radial glow */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '30%',
+            left: '40%',
+            transform: 'translate(-50%,-50%)',
+            width: 600,
+            height: 600,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+        {/* Subtle grid */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+            backgroundSize: '72px 72px',
+            pointerEvents: 'none',
+          }}
+        />
 
-            {/* Left */}
-            <div className="pt-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold mb-6"
-                style={{ background: '#EDE9FE', color: '#6C5CE7' }}>
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                New Era Of Mobile Apps
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: '0 auto',
+            padding: '0 32px',
+            paddingTop: 120,
+            paddingBottom: 100,
+            width: '100%',
+            position: 'relative',
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 64,
+            alignItems: 'center',
+          }}
+        >
+          {/* Left: copy */}
+          <div className="fade-in">
+            {/* Studio badge */}
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                background: 'rgba(124,58,237,0.15)',
+                border: '1px solid rgba(124,58,237,0.3)',
+                borderRadius: 99,
+                padding: '6px 14px',
+                marginBottom: 32,
+              }}
+            >
+              <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#4ADE80', animation: 'glowPulse 2s infinite' }} />
+              <span style={{ fontSize: 12, fontWeight: 600, color: '#A78BFA', letterSpacing: '0.5px' }}>
+                3 apps live on the App Store
+              </span>
+            </div>
+
+            <h1
+              style={{
+                fontSize: 'clamp(44px, 5.5vw, 72px)',
+                fontWeight: 800,
+                letterSpacing: '-2px',
+                lineHeight: 1.05,
+                color: '#fff',
+                marginBottom: 24,
+              }}
+            >
+              Beautiful iOS apps.<br />
+              <span style={{ color: '#A78BFA' }}>No compromises.</span>
+            </h1>
+
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.75,
+                color: 'rgba(255,255,255,0.5)',
+                maxWidth: 440,
+                marginBottom: 40,
+              }}
+            >
+              We&rsquo;re a small indie studio obsessed with quality. Every app we ship is native SwiftUI, respects your privacy, and costs a fair one-time price.
+            </p>
+
+            {/* CTAs */}
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 56 }}>
+              <Link href="/apps-list" className="btn-primary">
+                Browse All Apps
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="/contact" className="btn-ghost-white">
+                Get in Touch
+              </Link>
+            </div>
+
+            {/* Trust indicators */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div style={{ display: 'flex' }}>
+                  {'★★★★★'.split('').map((s, i) => (
+                    <span key={i} style={{ fontSize: 15, color: '#FBBF24' }}>{s}</span>
+                  ))}
+                </div>
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>4.8 avg rating</span>
               </div>
+              <div style={{ width: 1, height: 20, background: 'rgba(255,255,255,0.1)' }} />
+              <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>100K+ downloads</span>
+              <div style={{ width: 1, height: 20, background: 'rgba(255,255,255,0.1)' }} />
+              <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>50+ countries</span>
+            </div>
+          </div>
 
-              <h1 className="text-5xl sm:text-[3.5rem] font-extrabold leading-[1.08] tracking-tight mb-5">
-                <span className="text-gray-900">We Build Apps</span>
-                <br />
-                <span style={{
-                  background: 'linear-gradient(135deg, #6C5CE7, #A855F7)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}>
-                  People Love.
-                </span>
-              </h1>
-
-              <p className="text-[15px] text-gray-500 leading-relaxed mb-8 max-w-[420px]">
-                Creating world-class mobile experiences that transform ideas into digital
-                reality. Beautiful, fast, and built for scale.
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/apps-list"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-purple-200"
-                  style={{ background: 'linear-gradient(135deg, #6C5CE7, #A855F7)' }}
-                >
-                  Explore Our Apps
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/apps-list"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all"
-                >
-                  <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                  View Showreel
-                </Link>
+          {/* Right: 3 app preview cards */}
+          <div
+            className="fade-in-2"
+            style={{ position: 'relative', height: 480, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            {/* FlipScout — back left */}
+            <div
+              style={{
+                position: 'absolute',
+                left: 0,
+                top: '50%',
+                transform: 'translateY(-60%) rotate(-6deg)',
+                width: 200,
+                background: 'linear-gradient(160deg, #0D3026 0%, #064E3B 100%)',
+                border: '1px solid rgba(16,185,129,0.25)',
+                borderRadius: 20,
+                padding: '20px 18px',
+                boxShadow: '0 24px 48px rgba(0,0,0,0.4)',
+                zIndex: 1,
+                animation: 'float 6s ease-in-out infinite',
+              }}
+            >
+              <div style={{ fontSize: 28, marginBottom: 12 }}>🏠</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 4 }}>FlipScout</div>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>Real Estate</div>
+              <div style={{ background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.25)', borderRadius: 8, padding: '10px 12px' }}>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', marginBottom: 3 }}>Est. Profit</div>
+                <div style={{ fontSize: 18, fontWeight: 800, color: '#34D399' }}>$68,000</div>
               </div>
             </div>
 
-            {/* Right — hero visual */}
-            <div className="relative hidden lg:block h-[520px]">
-              {/* Main photo card */}
-              <div className="absolute right-0 top-8 w-64 h-80 rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/80"
-                style={{ background: 'linear-gradient(160deg, #f3f0ff 0%, #ede9fe 40%, #fdf4ff 100%)' }}>
-                {/* Placeholder for real photo */}
-                <div className="w-full h-full flex items-center justify-center relative">
-                  <div className="text-center">
-                    <div className="text-5xl mb-3">👩‍💻</div>
-                    <p className="text-purple-600 text-xs font-medium">Add your photo here</p>
-                  </div>
+            {/* StockLens — front center */}
+            <div
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: 220,
+                background: 'linear-gradient(160deg, #0C1A2E 0%, #0F172A 100%)',
+                border: '1px solid rgba(14,165,233,0.3)',
+                borderRadius: 20,
+                padding: '22px 20px',
+                boxShadow: '0 32px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(14,165,233,0.1)',
+                zIndex: 3,
+                animation: 'float 5s ease-in-out infinite',
+                animationDelay: '-2s',
+              }}
+            >
+              <div style={{ fontSize: 30, marginBottom: 14 }}>📊</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#fff', marginBottom: 4 }}>StockLens</div>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginBottom: 18 }}>Finance</div>
+              <div style={{ background: 'rgba(14,165,233,0.12)', border: '1px solid rgba(14,165,233,0.2)', borderRadius: 10, padding: '12px 14px', marginBottom: 10 }}>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginBottom: 4 }}>Portfolio</div>
+                <div style={{ fontSize: 22, fontWeight: 800, color: '#fff', letterSpacing: '-0.5px' }}>$24,891</div>
+                <div style={{ fontSize: 11, color: '#34D399', fontWeight: 600, marginTop: 3 }}>▲ +$582 today</div>
+              </div>
+              {[
+                { t: 'AAPL', c: '+1.2%', up: true },
+                { t: 'NVDA', c: '+3.8%', up: true },
+              ].map(s => (
+                <div key={s.t} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.7)' }}>{s.t}</span>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: s.up ? '#34D399' : '#F87171' }}>{s.c}</span>
                 </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Activity tracker card — top left overlapping */}
-              <div className="absolute left-0 top-6 bg-white rounded-2xl shadow-xl p-4 w-44 border border-gray-100">
-                <div className="text-[10px] font-semibold text-gray-400 mb-2 uppercase tracking-wide">Activity</div>
-                <div className="text-xs font-bold text-gray-800 leading-snug mb-2">WELL DONE!<br />YOU HIT YOUR GOAL.</div>
-                <div className="text-[10px] text-gray-400 mb-2">Oct 2024</div>
-                <div className="flex items-center gap-2">
-                  <div className="bg-gray-100 rounded-lg px-2 py-1 text-[10px] font-bold text-gray-700">00</div>
-                  <span className="text-gray-400 text-xs">:</span>
-                  <div className="bg-gray-100 rounded-lg px-2 py-1 text-[10px] font-bold text-gray-700">03</div>
-                  <div className="bg-purple-100 rounded-lg px-2 py-1 text-[10px] font-bold text-purple-700">13</div>
-                </div>
+            {/* TomeScout — back right */}
+            <div
+              style={{
+                position: 'absolute',
+                right: 0,
+                top: '50%',
+                transform: 'translateY(-40%) rotate(6deg)',
+                width: 200,
+                background: 'linear-gradient(160deg, #2D1A03 0%, #451A03 100%)',
+                border: '1px solid rgba(245,158,11,0.25)',
+                borderRadius: 20,
+                padding: '20px 18px',
+                boxShadow: '0 24px 48px rgba(0,0,0,0.4)',
+                zIndex: 2,
+                animation: 'float 7s ease-in-out infinite',
+                animationDelay: '-4s',
+              }}
+            >
+              <div style={{ fontSize: 28, marginBottom: 12 }}>📚</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 4 }}>TomeScout</div>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>Books & Resale</div>
+              <div style={{ background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.25)', borderRadius: 8, padding: '10px 12px' }}>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', marginBottom: 3 }}>Best offer</div>
+                <div style={{ fontSize: 18, fontWeight: 800, color: '#FCD34D' }}>$12.00</div>
+                <div style={{ fontSize: 10, color: 'rgba(245,158,11,0.6)', marginTop: 2 }}>via eBay</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Location pill */}
-              <div className="absolute left-16 top-52 bg-white rounded-full shadow-lg px-3 py-1.5 flex items-center gap-1.5 border border-gray-100">
-                <svg className="w-3 h-3 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-                <span className="text-[10px] font-semibold text-gray-700">Distance</span>
-                <span className="text-[10px] font-bold text-purple-600">3.8 km</span>
-              </div>
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  MARQUEE                                                  ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <div
+        style={{
+          background: '#0D0A1C',
+          borderTop: '1px solid rgba(124,58,237,0.18)',
+          borderBottom: '1px solid rgba(124,58,237,0.18)',
+          padding: '16px 0',
+          overflow: 'hidden',
+        }}
+      >
+        <div className="marquee-track" style={{ display: 'flex', gap: 40, whiteSpace: 'nowrap' }}>
+          {MARQUEE_ITEMS.map((item, i) => (
+            <span
+              key={i}
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: '2.5px',
+                textTransform: 'uppercase',
+                color: 'rgba(167,139,250,0.55)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 24,
+                flexShrink: 0,
+              }}
+            >
+              {item}
+              <span style={{ color: 'rgba(124,58,237,0.35)', fontSize: 9 }}>●</span>
+            </span>
+          ))}
+        </div>
+      </div>
 
-              {/* First Workout card — bottom right */}
-              <div className="absolute right-2 bottom-4 bg-white rounded-2xl shadow-xl p-3 w-48 border border-gray-100">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-xs font-bold text-gray-900 mb-0.5">First Workout</div>
-                    <div className="text-[10px] text-gray-400">View Report</div>
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  APPS SHOWCASE                                            ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <section style={{ background: '#F9FAFB', padding: '100px 32px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: 64 }}>
+            <div className="section-label" style={{ marginBottom: 16 }}>Our Apps</div>
+            <h2
+              style={{
+                fontSize: 'clamp(32px, 4vw, 52px)',
+                fontWeight: 800,
+                letterSpacing: '-1.5px',
+                color: '#07050F',
+                marginBottom: 16,
+                lineHeight: 1.1,
+              }}
+            >
+              Three apps. One standard.
+            </h2>
+            <p style={{ fontSize: 16, color: '#6B7280', maxWidth: 480, margin: '0 auto', lineHeight: 1.7 }}>
+              Every app we ship meets the same bar — native, polished, and honest.
+            </p>
+          </div>
+
+          {/* App cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+            {APPS.map((app) => (
+              <a
+                key={app.slug}
+                href={app.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="app-card"
+                style={{
+                  background: '#fff',
+                  border: '1px solid #E5E7EB',
+                  borderRadius: 20,
+                  overflow: 'hidden',
+                  display: 'block',
+                }}
+              >
+                {/* Gradient top bar */}
+                <div style={{ background: app.gradient, height: 6 }} />
+
+                <div style={{ padding: 28 }}>
+                  {/* Icon + meta */}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
+                    <div
+                      style={{
+                        width: 52,
+                        height: 52,
+                        borderRadius: 14,
+                        background: app.gradient,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: 24,
+                      }}
+                    >
+                      {app.icon}
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ fontSize: 18, fontWeight: 800, color: '#07050F', letterSpacing: '-0.5px' }}>
+                        {app.price}
+                      </div>
+                      <div style={{ fontSize: 11, color: '#9CA3AF', fontWeight: 500 }}>{app.priceLabel}</div>
+                    </div>
                   </div>
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-white"
-                    style={{ background: 'linear-gradient(135deg, #6C5CE7, #A855F7)' }}>
-                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
+
+                  {/* Name + tagline */}
+                  <div style={{ marginBottom: 20 }}>
+                    <div style={{ fontSize: 20, fontWeight: 800, color: '#07050F', letterSpacing: '-0.5px', marginBottom: 6 }}>
+                      {app.name}
+                    </div>
+                    <div style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.55 }}>{app.tagline}</div>
+                  </div>
+
+                  {/* Category badge */}
+                  <div
+                    style={{
+                      display: 'inline-block',
+                      fontSize: 11,
+                      fontWeight: 700,
+                      padding: '4px 10px',
+                      borderRadius: 99,
+                      background: `${app.color}15`,
+                      color: app.color,
+                      marginBottom: 20,
+                    }}
+                  >
+                    {app.category}
+                  </div>
+
+                  {/* Features */}
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
+                    {app.features.map(f => (
+                      <li key={f} className="feature-row">
+                        <span className="feature-dot" style={{ background: app.color }} />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      paddingTop: 20,
+                      borderTop: '1px solid #F3F4F6',
+                    }}
+                  >
+                    <span style={{ fontSize: 13, fontWeight: 600, color: app.color }}>Learn more</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={app.color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </div>
                 </div>
-              </div>
-
-              {/* Floating dots */}
-              <div className="absolute top-4 left-44 w-2.5 h-2.5 rounded-full bg-purple-300 opacity-70" />
-              <div className="absolute top-16 right-6 w-2 h-2 rounded-full bg-pink-300 opacity-60" />
-              <div className="absolute bottom-24 left-6 w-2 h-2 rounded-full bg-blue-300 opacity-50" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── STATS ── */}
-      <section className="py-14 px-6" style={{ background: '#FAFAFA' }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 gap-6">
-            {stats.map((s) => (
-              <div key={s.label} className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-2xl flex items-center justify-center text-xl flex-shrink-0"
-                  style={{ background: s.iconBg }}>
-                  {s.icon}
-                </div>
-                <div>
-                  <div className="text-2xl font-extrabold text-gray-900">{s.value}</div>
-                  <div className="text-[10px] font-semibold text-gray-400 tracking-widest uppercase mt-0.5">{s.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FEATURED APPS ── */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Featured Apps</h2>
-            <p className="text-sm text-gray-500 max-w-lg mx-auto leading-relaxed">
-              Discover our portfolio of top-charting applications designed with focus on
-              user experience and performance.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {apps.map((app) => (
-              <a
-                key={app.slug}
-                href={app.url}
-                className="group bg-white border border-gray-100 rounded-2xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col"
-              >
-                {/* Top row: icon + category */}
-                <div className="flex items-start justify-between mb-3">
-                  <div className="app-icon w-12 h-12 flex items-center justify-center text-2xl shadow-sm"
-                    style={{ background: app.gradient }}>
-                    {app.icon}
-                  </div>
-                  <span className="text-[11px] font-semibold text-gray-400">{app.category}</span>
-                </div>
-
-                <h3 className="font-bold text-gray-900 text-base mb-1.5">{app.name}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed flex-1 mb-5">{app.description}</p>
-
-                {/* Visit App button */}
-                <button
-                  className="w-full py-2 rounded-xl text-sm font-semibold border border-gray-200 text-gray-600 group-hover:border-purple-300 group-hover:text-purple-600 transition-all"
-                >
-                  {app.comingSoon ? 'Coming Soon' : 'Visit App'}
-                </button>
               </a>
             ))}
-
-            {/* More coming soon card */}
-            <div className="bg-gray-50 border border-dashed border-gray-200 rounded-2xl p-5 flex flex-col items-center justify-center text-center min-h-[200px]">
-              <div className="text-3xl mb-2">🚀</div>
-              <div className="font-semibold text-gray-400 text-sm">More apps coming soon</div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ── WHY CHOOSE ── */}
-      <section className="py-20 px-6" style={{ background: '#FAFAFA' }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Why Choose Our Apps</h2>
-            <p className="text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
-              We don&apos;t just build apps; we engineer experiences that users love to return to every single day.
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  PHILOSOPHY                                               ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <section style={{ background: '#07050F', padding: '100px 32px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+
+          <div style={{ textAlign: 'center', marginBottom: 64 }}>
+            <div className="section-label" style={{ color: '#A78BFA', marginBottom: 16 }}>Our Philosophy</div>
+            <h2
+              style={{
+                fontSize: 'clamp(32px, 4vw, 52px)',
+                fontWeight: 800,
+                letterSpacing: '-1.5px',
+                color: '#fff',
+                marginBottom: 16,
+                lineHeight: 1.1,
+              }}
+            >
+              Why our apps feel different.
+            </h2>
+            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.4)', maxWidth: 440, margin: '0 auto', lineHeight: 1.7 }}>
+              We make deliberate choices that most app studios won&rsquo;t. Here&rsquo;s what we stand for.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {features.map((f) => (
-              <div key={f.title} className="text-center">
-                <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"
-                  style={{ background: f.iconBg }}>
-                  {f.icon}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
+            {[
+              {
+                number: '01',
+                title: 'Native SwiftUI',
+                body: 'We only build with SwiftUI. No cross-platform shortcuts, no React Native wrappers. Your app performs exactly the way iOS was designed to perform.',
+                items: ['Follows iOS HIG exactly', 'Hardware-accelerated animations', 'Full Dynamic Island & Live Activities support', 'First-party look and feel'],
+              },
+              {
+                number: '02',
+                title: 'Privacy First',
+                body: 'Your data is yours. We design apps where everything stays on your device by default. No analytics, no invisible data harvesting, no mandatory accounts.',
+                items: ['Data stored locally on your device', 'Zero behavioral tracking', 'No required sign-in', 'Transparent data practices'],
+              },
+              {
+                number: '03',
+                title: 'Honest Pricing',
+                body: 'One price, forever. We don\'t believe in monthly fees for features you already paid for. Buy it once, own it forever.',
+                items: ['One-time purchase model', 'No paywalled core features', 'Free updates for life', 'Supports independent development'],
+              },
+            ].map((p, i) => (
+              <div
+                key={p.number}
+                style={{
+                  background: '#0D0A1C',
+                  padding: '40px 36px',
+                  borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                  transition: 'background 0.2s',
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 700,
+                    letterSpacing: '2px',
+                    color: 'rgba(167,139,250,0.5)',
+                    marginBottom: 20,
+                    fontVariantNumeric: 'tabular-nums',
+                  }}
+                >
+                  {p.number}
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{f.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
+                <h3
+                  style={{
+                    fontSize: 22,
+                    fontWeight: 800,
+                    color: '#fff',
+                    letterSpacing: '-0.5px',
+                    marginBottom: 14,
+                  }}
+                >
+                  {p.title}
+                </h3>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: 28 }}>
+                  {p.body}
+                </p>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {p.items.map(item => (
+                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)' }}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  REVIEWS                                                  ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <section style={{ background: '#fff', padding: '100px 32px', borderTop: '1px solid #F3F4F6' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div className="section-label" style={{ marginBottom: 16 }}>Reviews</div>
+            <h2
+              style={{
+                fontSize: 'clamp(28px, 3.5vw, 44px)',
+                fontWeight: 800,
+                letterSpacing: '-1px',
+                color: '#07050F',
+                lineHeight: 1.1,
+              }}
+            >
+              People love our apps.
+            </h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+            {REVIEWS.map(r => (
+              <div key={r.name} className="review-card">
+                {/* Stars */}
+                <div style={{ display: 'flex', gap: 2, marginBottom: 16 }}>
+                  {'★★★★★'.split('').map((s, i) => (
+                    <span key={i} style={{ color: '#FBBF24', fontSize: 14 }}>{s}</span>
+                  ))}
+                </div>
+                <p style={{ fontSize: 15, lineHeight: 1.75, color: '#374151', marginBottom: 24 }}>
+                  &ldquo;{r.text}&rdquo;
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 20, borderTop: '1px solid #F3F4F6' }}>
+                  <div>
+                    <div style={{ fontSize: 14, fontWeight: 700, color: '#07050F' }}>{r.name}</div>
+                    <div style={{ fontSize: 12, color: '#9CA3AF', marginTop: 2 }}>{r.handle}</div>
+                  </div>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 700,
+                      padding: '4px 10px',
+                      borderRadius: 99,
+                      background: `${r.appColor}12`,
+                      color: r.appColor,
+                    }}
+                  >
+                    {r.app}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  CTA                                                       ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <section style={{ background: '#07050F', padding: '100px 32px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+          <Image
+            src="/hugeappfactory-icon.svg"
+            alt="Huge App Factory"
+            width={60}
+            height={60}
+            style={{ borderRadius: 16, margin: '0 auto 28px' }}
+          />
+          <h2
+            style={{
+              fontSize: 'clamp(32px, 4vw, 54px)',
+              fontWeight: 800,
+              letterSpacing: '-1.5px',
+              color: '#fff',
+              lineHeight: 1.1,
+              marginBottom: 20,
+            }}
+          >
+            Ready to download?
+          </h2>
+          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: 40, maxWidth: 400, margin: '0 auto 40px' }}>
+            Pick an app and get started. No accounts, no subscriptions — just great iOS software.
+          </p>
+
+          {/* App pills */}
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 32 }}>
+            {APPS.map(app => (
+              <a
+                key={app.slug}
+                href={app.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  padding: '10px 18px',
+                  borderRadius: 12,
+                  background: `${app.color}12`,
+                  border: `1px solid ${app.color}28`,
+                  color: app.color,
+                  fontSize: 14,
+                  fontWeight: 600,
+                  transition: 'background 0.2s, border-color 0.2s',
+                }}
+              >
+                <span style={{ fontSize: 18 }}>{app.icon}</span>
+                {app.name}
+              </a>
+            ))}
+          </div>
+
+          <Link href="/contact" className="btn-white">
+            Contact the Studio
+          </Link>
         </div>
       </section>
 

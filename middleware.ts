@@ -4,8 +4,7 @@ import type { NextRequest } from 'next/server'
 const SUBDOMAIN_MAP: Record<string, string> = {
   stocklens: '/apps/stocklens',
   flipscout: '/apps/flipscout',
-  truthordare: '/apps/truthordare',
-  simpletodo: '/apps/simpletodo',
+  tomescout: '/apps/tomescout',
 }
 
 export function middleware(request: NextRequest) {
@@ -15,7 +14,7 @@ export function middleware(request: NextRequest) {
   const hostWithoutPort = hostname.split(':')[0]
 
   // Extract subdomain
-  // Handles: stocklens.hugeappfactory.com and stocklens.localhost
+  // Handles: stocklens.nextappfactory.com and stocklens.localhost
   const parts = hostWithoutPort.split('.')
   const subdomain = parts.length >= 2 ? parts[0] : null
 

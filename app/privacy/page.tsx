@@ -24,7 +24,7 @@ const sections = [
   },
   {
     title: 'Your Rights',
-    body: `Depending on your location, you may have the right to access, correct, or delete your personal information. To exercise these rights, contact us at admin@hugeappfactory.com.`,
+    body: `Depending on your location, you may have the right to access, correct, or delete your personal information. To exercise these rights, contact us at admin@nextappfactory.com.`,
   },
   {
     title: 'Changes to This Policy',
@@ -32,7 +32,7 @@ const sections = [
   },
   {
     title: 'Contact Us',
-    body: `If you have questions about this Privacy Policy, please contact us at admin@hugeappfactory.com.`,
+    body: `If you have questions about this Privacy Policy, please contact us at admin@nextappfactory.com.`,
   },
 ]
 

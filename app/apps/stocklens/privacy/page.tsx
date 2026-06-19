@@ -7,7 +7,7 @@ const sections = [
   { title: 'Advertising', body: 'The free version of StockLens may display ads served by Google AdMob. AdMob may collect identifiers and usage data to serve relevant ads. You can review Google\'s privacy policy at policies.google.com/privacy.' },
   { title: 'In-App Purchases', body: 'Any purchases are processed entirely by Apple through the App Store. We do not receive or store your payment information.' },
   { title: 'Data Security', body: 'Your watchlists and portfolio data are stored locally on your device. We use Apple\'s standard data protection APIs to keep your data secure.' },
-  { title: 'Contact', body: 'For privacy questions related to StockLens, email us at admin@hugeappfactory.com.' },
+  { title: 'Contact', body: 'For privacy questions related to StockLens, email us at admin@nextappfactory.com.' },
 ]
 
 export default function StockLensPrivacyPage() {
@@ -17,9 +17,9 @@ export default function StockLensPrivacyPage() {
         appName="StockLens"
         accentColor="#0ea5e9"
         gradient="linear-gradient(135deg, #0ea5e9, #6366f1)"
-        homeUrl="http://stocklens.hugeappfactory.com"
-        privacyUrl="http://stocklens.hugeappfactory.com/privacy"
-        supportUrl="http://stocklens.hugeappfactory.com/support"
+        homeUrl="http://stocklens.nextappfactory.com"
+        privacyUrl="http://stocklens.nextappfactory.com/privacy"
+        supportUrl="http://stocklens.nextappfactory.com/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">

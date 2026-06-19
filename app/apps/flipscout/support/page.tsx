@@ -8,7 +8,7 @@ const faqs = [
   { q: 'Is my property data backed up?', a: 'Property data is stored locally on your device. It will be included in your standard iCloud or iTunes backup. We recommend keeping backups enabled.' },
   { q: 'How do I sign in with Apple?', a: 'On the sign-in screen, tap "Continue with Apple." You can choose to share or hide your email address. Your Apple ID password is never shared with us.' },
   { q: 'How do I restore a purchase?', a: 'Go to Settings within the app and tap "Restore Purchases." Make sure you are signed in with the same Apple ID used for the original purchase.' },
-  { q: 'I found a bug. How do I report it?', a: 'Email admin@hugeappfactory.com with the subject "FlipScout Bug Report." Please include your iOS version, device model, and a description of the issue.' },
+  { q: 'I found a bug. How do I report it?', a: 'Email admin@nextappfactory.com with the subject "FlipScout Bug Report." Please include your iOS version, device model, and a description of the issue.' },
 ]
 
 export default function FlipScoutSupportPage() {
@@ -18,9 +18,9 @@ export default function FlipScoutSupportPage() {
         appName="FlipScout"
         accentColor="#10b981"
         gradient="linear-gradient(135deg, #10b981, #059669)"
-        homeUrl="http://flipscout.hugeappfactory.com"
-        privacyUrl="http://flipscout.hugeappfactory.com/privacy"
-        supportUrl="http://flipscout.hugeappfactory.com/support"
+        homeUrl="http://flipscout.nextappfactory.com"
+        privacyUrl="http://flipscout.nextappfactory.com/privacy"
+        supportUrl="http://flipscout.nextappfactory.com/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">
@@ -48,7 +48,7 @@ export default function FlipScoutSupportPage() {
             <div className="text-sm text-gray-500">Send us an email and we'll respond within 1–2 business days.</div>
           </div>
           <a
-            href="mailto:admin@hugeappfactory.com?subject=FlipScout Support"
+            href="mailto:admin@nextappfactory.com?subject=FlipScout Support"
             className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white whitespace-nowrap shadow-sm"
             style={{ background: 'linear-gradient(135deg, #10b981, #059669)' }}
           >
