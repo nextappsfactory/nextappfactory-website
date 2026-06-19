@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Huge App Factory — iOS Apps',
+  title: 'Next App Factory — iOS Apps',
   description: 'We build beautifully crafted iOS apps. Explore our collection.',
   icons: {
     icon: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     other: [{ rel: 'manifest', url: '/site.webmanifest' }],
   },
   verification: {
-    google: 'lGP2COSEeEhekagBBq4BgFuIPg7rBpKUK7XYV2gky7U',
+    google: '-LJqj7muhfbaK0bgihXZ2yj-F4cn4qnid_ZWBBElI2I',
   },
 }
 
