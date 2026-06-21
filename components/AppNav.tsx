@@ -17,7 +17,7 @@ export default function AppNav({ appName, accentColor, gradient, homeUrl, privac
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          <span className="hidden sm:inline">Huge App Factory</span>
+          <span className="hidden sm:inline">Next App Factory</span>
         </Link>
         <span className="text-gray-200 hidden sm:inline">/</span>
         <Link href={homeUrl} className="text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors hidden sm:inline">

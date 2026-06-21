@@ -50,7 +50,7 @@ export default function PrivacyPage() {
       <section className="px-6 pb-32">
         <div className="max-w-2xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-8 shadow-sm space-y-8">
           <p className="text-gray-500 text-sm leading-relaxed">
-            Huge App Factory LLC ("we", "our", or "us") is committed to protecting your privacy.
+            Next App Factory LLC ("we", "our", or "us") is committed to protecting your privacy.
             This policy explains how we collect, use, and share information when you use our
             website and apps.
           </p>

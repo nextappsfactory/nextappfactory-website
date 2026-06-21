@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 const sections = [
   {
     title: 'Acceptance of Terms',
-    body: `By accessing or using the Huge App Factory website or any of our apps, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.`,
+    body: `By accessing or using the Next App Factory website or any of our apps, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.`,
   },
   {
     title: 'Use of Our Services',
@@ -16,7 +16,7 @@ const sections = [
   },
   {
     title: 'Intellectual Property',
-    body: `All content, designs, logos, and code on our website and in our apps are the property of Huge App Factory LLC. You may not reproduce, distribute, or create derivative works without our written permission.`,
+    body: `All content, designs, logos, and code on our website and in our apps are the property of Next App Factory LLC. You may not reproduce, distribute, or create derivative works without our written permission.`,
   },
   {
     title: 'Disclaimer of Warranties',
@@ -24,7 +24,7 @@ const sections = [
   },
   {
     title: 'Limitation of Liability',
-    body: `To the fullest extent permitted by law, Huge App Factory LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.`,
+    body: `To the fullest extent permitted by law, Next App Factory LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.`,
   },
   {
     title: 'Governing Law',
@@ -54,8 +54,8 @@ export default function TermsPage() {
       <section className="px-6 pb-32">
         <div className="max-w-2xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-8 shadow-sm space-y-8">
           <p className="text-gray-500 text-sm leading-relaxed">
-            These Terms of Service govern your use of the Huge App Factory LLC website located at
-            nextappfactory.com and all related apps and services offered by Huge App Factory LLC.
+            These Terms of Service govern your use of the Next App Factory LLC website located at
+            nextappfactory.com and all related apps and services offered by Next App Factory LLC.
           </p>
 
           {sections.map((s) => (

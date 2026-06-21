@@ -32,7 +32,7 @@ export default function TomeScoutPrivacyPage() {
       <section className="px-6 pb-32">
         <div className="max-w-2xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-8 shadow-sm space-y-7">
           <p className="text-sm text-gray-500 leading-relaxed">
-            Your privacy matters. This policy explains how TomeScout, developed by Huge App Factory LLC, handles your information.
+            Your privacy matters. This policy explains how TomeScout, developed by Next App Factory LLC, handles your information.
           </p>
           {sections.map((s) => (
             <div key={s.title}>

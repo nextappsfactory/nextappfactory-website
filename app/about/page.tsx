@@ -37,7 +37,7 @@ export default function AboutPage() {
       <section className="pt-36 pb-20 px-6 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-indigo-500 mb-3">Our Story</p>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-          About Huge App Factory
+          About Next App Factory
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
           An independent iOS studio building polished, purposeful apps — one at a time.
@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-10 shadow-sm">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
           <p className="text-gray-500 leading-relaxed mb-4">
-            Huge App Factory LLC was founded with one belief: great software should be accessible,
+            Next App Factory LLC was founded with one belief: great software should be accessible,
             simple, and delightful. We build iOS apps that solve real problems without adding
             unnecessary complexity.
           </p>

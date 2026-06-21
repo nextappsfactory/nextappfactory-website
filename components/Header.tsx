@@ -21,9 +21,9 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <Image src="/hugeappfactory-icon.svg" alt="Huge App Factory" width={32} height={32} style={{ borderRadius: 8 }} />
+          <Image src="/nextappfactory-icon.svg" alt="Next App Factory" width={32} height={32} style={{ borderRadius: 8 }} />
           <span style={{ fontSize: 15, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px' }}>
-            Huge App Factory
+            Next App Factory
           </span>
         </Link>
 

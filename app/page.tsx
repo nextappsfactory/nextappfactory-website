@@ -668,8 +668,8 @@ export default function HomePage() {
       <section style={{ background: '#07050F', padding: '100px 32px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
           <Image
-            src="/hugeappfactory-icon.svg"
-            alt="Huge App Factory"
+            src="/nextappfactory-icon.svg"
+            alt="Next App Factory"
             width={60}
             height={60}
             style={{ borderRadius: 16, margin: '0 auto 28px' }}

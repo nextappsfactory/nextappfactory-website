@@ -28,8 +28,8 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <Image src="/hugeappfactory-icon.svg" alt="Huge App Factory" width={30} height={30} style={{ borderRadius: 8 }} />
-              <span style={{ fontSize: 14, fontWeight: 700, color: '#fff' }}>Huge App Factory</span>
+              <Image src="/nextappfactory-icon.svg" alt="Next App Factory" width={30} height={30} style={{ borderRadius: 8 }} />
+              <span style={{ fontSize: 14, fontWeight: 700, color: '#fff' }}>Next App Factory</span>
             </Link>
             <p style={{ fontSize: 13, lineHeight: 1.75, color: 'rgba(255,255,255,0.4)', maxWidth: 240, marginBottom: 20 }}>
               Indie iOS studio building native apps with SwiftUI. No subscriptions. No compromises.
@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.25)' }}>
-            © {new Date().getFullYear()} Huge App Factory LLC. All rights reserved.
+            © {new Date().getFullYear()} Next App Factory LLC. All rights reserved.
           </p>
           <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.25)' }}>
             Made with SwiftUI ·{' '}
