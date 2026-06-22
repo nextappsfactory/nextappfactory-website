@@ -3,18 +3,19 @@ import AppPageTemplate from '@/components/AppPageTemplate'
 export default function DoyumPage() {
   return (
     <AppPageTemplate app={{
-      name: 'Doyum',
+      name: 'Doyum AI',
       tagline: 'AI-powered calorie tracking. Just snap a photo.',
       description: 'Doyum makes nutrition tracking effortless. Take a photo of any meal and our AI instantly identifies the food and logs the calories, macros, and nutrients. No more manual entry — just eat, snap, and stay on track.',
-      icon: '🍽',
-      gradient: 'linear-gradient(135deg, #10B981, #059669)',
-      accentColor: '#10B981',
-      lightBg: '#ECFDF5',
+      icon: '🥗',
+      gradient: 'linear-gradient(135deg, #33CDBE, #FF6B6B)',
+      accentColor: '#FF6B6B',
+      lightBg: '#FFF1F1',
       category: 'Health & Fitness',
+      screenshots: ['/doyum/today.png', '/doyum/paywall.png', '/doyum/water.png', '/doyum/welcome.png'],
       homeUrl: 'http://doyumai.nextappfactory.com',
       privacyUrl: 'http://doyumai.nextappfactory.com/privacy',
       supportUrl: 'http://doyumai.nextappfactory.com/support',
-      contactEmail: 'contact@doyum.nextappfactory.com',
+      contactEmail: 'admin@nextappfactory.com',
       features: [
         { icon: '📸', title: 'Photo Logging', desc: 'Snap a photo of your meal and AI instantly identifies the food and estimates calories.' },
         { icon: '🧠', title: 'AI Recognition', desc: 'Trained on thousands of foods — from home-cooked meals to restaurant dishes.' },

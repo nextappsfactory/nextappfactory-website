@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export interface AppFeature {
   icon: string
@@ -16,6 +17,7 @@ export interface AppPageConfig {
   accentColor: string
   lightBg: string
   category: string
+  screenshots?: string[]
   features: AppFeature[]
   appStoreUrl?: string
   privacyUrl: string
@@ -102,15 +104,29 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
       {/* ── SCREENSHOT STRIP ── */}
       <section className="pb-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex-shrink-0 snap-start w-44 h-80 rounded-3xl flex items-center justify-center text-3xl shadow-md border border-gray-100"
-                style={{ background: i % 2 === 0 ? app.lightBg : `${app.accentColor}08` }}>
-                {app.icon}
+          {app.screenshots && app.screenshots.length > 0 ? (
+            <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide justify-center">
+              {app.screenshots.map((src) => (
+                <div key={src} className="flex-shrink-0 snap-start rounded-[28px] overflow-hidden shadow-md border border-gray-100"
+                  style={{ width: 200 }}>
+                  <Image src={src} alt={`${app.name} screenshot`} width={200} height={434}
+                    style={{ display: 'block', width: 200, height: 'auto' }} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="flex-shrink-0 snap-start w-44 h-80 rounded-3xl flex items-center justify-center text-3xl shadow-md border border-gray-100"
+                    style={{ background: i % 2 === 0 ? app.lightBg : `${app.accentColor}08` }}>
+                    {app.icon}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-gray-300 mt-3">Screenshots coming soon</p>
+              <p className="text-center text-xs text-gray-300 mt-3">Screenshots coming soon</p>
+            </>
+          )}
         </div>
       </section>
 
