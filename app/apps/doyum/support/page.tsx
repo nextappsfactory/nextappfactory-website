@@ -19,9 +19,9 @@ export default function DoyumSupportPage() {
         appName="Doyum"
         accentColor="#10B981"
         gradient="linear-gradient(135deg, #10B981, #059669)"
-        homeUrl="http://doyum.nextappfactory.com"
-        privacyUrl="http://doyum.nextappfactory.com/privacy"
-        supportUrl="http://doyum.nextappfactory.com/support"
+        homeUrl="http://doyumai.nextappfactory.com"
+        privacyUrl="http://doyumai.nextappfactory.com/privacy"
+        supportUrl="http://doyumai.nextappfactory.com/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">

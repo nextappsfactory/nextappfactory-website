@@ -11,9 +11,9 @@ export default function DoyumPage() {
       accentColor: '#10B981',
       lightBg: '#ECFDF5',
       category: 'Health & Fitness',
-      homeUrl: 'http://doyum.nextappfactory.com',
-      privacyUrl: 'http://doyum.nextappfactory.com/privacy',
-      supportUrl: 'http://doyum.nextappfactory.com/support',
+      homeUrl: 'http://doyumai.nextappfactory.com',
+      privacyUrl: 'http://doyumai.nextappfactory.com/privacy',
+      supportUrl: 'http://doyumai.nextappfactory.com/support',
       contactEmail: 'contact@doyum.nextappfactory.com',
       features: [
         { icon: '📸', title: 'Photo Logging', desc: 'Snap a photo of your meal and AI instantly identifies the food and estimates calories.' },
