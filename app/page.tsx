@@ -75,6 +75,26 @@ const APPS = [
     ],
     mockup: null,
   },
+  {
+    slug: 'doyumai',
+    name: 'Doyum AI',
+    tagline: 'Snap a photo, instantly count calories & macros.',
+    category: 'Health & Fitness',
+    icon: '🥗',
+    color: '#FF6B6B',
+    gradient: 'linear-gradient(135deg, #33CDBE 0%, #FF6B6B 100%)',
+    lightBg: '#FFF1F1',
+    price: 'Free',
+    priceLabel: 'Coming soon',
+    href: 'https://doyumai.nextappfactory.com',
+    features: [
+      'AI calorie & macro estimates from a photo',
+      'Daily targets, streaks & progress',
+      'Water, weight & trend tracking',
+      'Available in 29 languages',
+    ],
+    mockup: null,
+  },
 ]
 
 const REVIEWS = [
@@ -408,7 +428,7 @@ export default function HomePage() {
           </div>
 
           {/* App cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
             {APPS.map((app) => (
               <a
                 key={app.slug}
@@ -504,6 +524,51 @@ export default function HomePage() {
                 </div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ╔══════════════════════════════════════════════════════════╗
+          ║  FEATURED — DOYUM AI                                      ║
+          ╚══════════════════════════════════════════════════════════╝ */}
+      <section style={{ background: '#fff', padding: '100px 32px', borderTop: '1px solid #F3F4F6' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div className="section-label" style={{ marginBottom: 16 }}>New · Health &amp; Fitness</div>
+            <h2 style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#07050F', marginBottom: 16, lineHeight: 1.1 }}>
+              Meet Doyum AI
+            </h2>
+            <p style={{ fontSize: 16, color: '#6B7280', maxWidth: 540, margin: '0 auto', lineHeight: 1.7 }}>
+              Snap a photo of your meal and get instant calorie &amp; macro estimates. Track your targets, streaks, water and weight — in 29 languages.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', gap: 28, justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+            {[
+              { src: 'today', label: 'Daily calories & macros' },
+              { src: 'paywall', label: 'Doyum Pro' },
+              { src: 'water', label: 'Water tracking' },
+            ].map((shot, i) => (
+              <div
+                key={shot.src}
+                style={{
+                  borderRadius: 36,
+                  overflow: 'hidden',
+                  boxShadow: '0 30px 70px rgba(0,0,0,0.20)',
+                  border: '1px solid #EEE',
+                  transform: i === 1 ? 'scale(1.06)' : 'none',
+                  zIndex: i === 1 ? 2 : 1,
+                }}
+              >
+                <Image src={`/doyum/${shot.src}.png`} alt={`Doyum AI — ${shot.label}`} width={248} height={539} style={{ display: 'block', width: 248, height: 'auto' }} />
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: 52 }}>
+            <a href="https://doyumai.nextappfactory.com" className="btn-primary" style={{ background: '#FF6B6B' }}>
+              Learn more about Doyum AI
+            </a>
           </div>
         </div>
       </section>
