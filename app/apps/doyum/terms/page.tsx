@@ -3,40 +3,44 @@ import Footer from '@/components/Footer'
 
 const sections = [
   {
-    title: 'Acceptance of Terms',
-    body: 'By downloading or using Doyum, you agree to be bound by these Terms of Service. If you do not agree, please do not use the app.',
+    title: 'The service',
+    body: 'Doyum AI estimates calories and macros from meal photos and helps you track nutrition and progress. Estimates are approximate and provided for general informational purposes.',
   },
   {
-    title: 'Use of the App',
-    body: 'Doyum is intended for personal, non-commercial use. You may not copy, modify, distribute, or reverse-engineer any part of the app. You agree not to use the app for any unlawful purpose.',
+    title: 'Not medical advice',
+    body: 'Doyum AI is not a medical device and does not provide medical, dietary, or health advice. Always consult a qualified professional before making decisions about your diet or health. Do not rely on the App for medical purposes.',
   },
   {
-    title: 'AI Food Recognition',
-    body: 'The calorie and nutrition estimates provided by Doyum\'s AI are approximations only and should not be used as a substitute for professional dietary or medical advice. Results may vary based on photo quality, portion size, and food preparation.',
+    title: 'Your account',
+    body: 'You are responsible for activity under your account and for keeping your sign-in secure. You must be at least 13 (or the minimum age in your country) to use the App.',
   },
   {
-    title: 'Health Disclaimer',
-    body: 'Doyum is a general wellness tool and is not a medical device. It is not intended to diagnose, treat, cure, or prevent any disease or health condition. Always consult a qualified healthcare professional before making dietary changes.',
+    title: 'Subscriptions (Doyum Pro)',
+    body: 'Doyum Pro is an auto-renewable subscription billed through your Apple ID. It renews automatically unless cancelled at least 24 hours before the end of the period. Manage or cancel anytime in your Apple ID settings → Subscriptions. Prices are shown in the App before purchase.',
   },
   {
-    title: 'In-App Purchases',
-    body: 'Some features require a one-time in-app purchase processed by Apple through the App Store. All sales are final and subject to Apple\'s refund policy. We do not have access to your payment information.',
+    title: 'Acceptable use',
+    body: 'You agree not to misuse the App, including posting unlawful, abusive, or infringing content in any social features, harassing others, or attempting to disrupt the service. We may remove content and suspend accounts that violate these Terms.',
   },
   {
-    title: 'Intellectual Property',
-    body: 'All content, designs, logos, and code in Doyum are the property of Next App Factory LLC. You may not reproduce or distribute any part without written permission.',
+    title: 'Content',
+    body: 'You retain rights to content you create. By posting in social features you grant us a limited license to host and display it to the audience you choose. You are responsible for content you share.',
   },
   {
-    title: 'Limitation of Liability',
-    body: 'To the fullest extent permitted by law, Next App Factory LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of Doyum or reliance on its nutritional data.',
+    title: 'Disclaimers & liability',
+    body: 'The App is provided "as is" without warranties. To the maximum extent permitted by law, Next App Factory LLC is not liable for indirect or consequential damages arising from your use of the App.',
   },
   {
-    title: 'Changes to Terms',
-    body: 'We may update these Terms from time to time. Continued use of the app after changes are posted constitutes acceptance of the revised Terms.',
+    title: 'Termination',
+    body: 'You may stop using the App and delete your account at any time (Profile → Delete Account). We may suspend or terminate access for violations of these Terms.',
+  },
+  {
+    title: 'Changes',
+    body: 'We may update these Terms and will revise the date above. Continued use means you accept the changes.',
   },
   {
     title: 'Contact',
-    body: 'For questions about these Terms, contact us at admin@nextappfactory.com.',
+    body: 'admin@nextappfactory.com',
   },
 ]
 
@@ -44,7 +48,7 @@ export default function DoyumTermsPage() {
   return (
     <div className="min-h-screen" style={{ background: '#f5f5fa' }}>
       <AppNav
-        appName="Doyum"
+        appName="Doyum AI"
         accentColor="#10B981"
         gradient="linear-gradient(135deg, #10B981, #059669)"
         homeUrl="http://doyumai.nextappfactory.com"
@@ -55,16 +59,25 @@ export default function DoyumTermsPage() {
       <section className="pt-36 pb-10 px-6 text-center">
         <div className="app-icon w-14 h-14 mx-auto mb-5 flex items-center justify-center text-2xl"
           style={{ background: 'linear-gradient(135deg, #10B981, #059669)' }}>🍽</div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Doyum Terms of Service</h1>
-        <p className="text-gray-400 text-sm">Effective date: January 1, 2025</p>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Terms of Use</h1>
+        <p className="text-gray-400 text-sm">Doyum AI · Last updated June 22, 2026</p>
       </section>
 
       <section className="px-6 pb-32">
         <div className="max-w-2xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-8 shadow-sm space-y-7">
+          <p className="text-sm text-gray-500 leading-relaxed">
+            These Terms govern your use of the Doyum AI mobile app (the "App"), operated by Next App Factory LLC. By using the App you agree to these Terms.
+          </p>
           {sections.map((s) => (
             <div key={s.title}>
               <h2 className="text-sm font-bold text-gray-900 mb-1.5">{s.title}</h2>
-              <p className="text-sm text-gray-500 leading-relaxed">{s.body}</p>
+              {s.title === 'Contact' ? (
+                <a href="mailto:admin@nextappfactory.com" className="text-sm text-emerald-600 hover:underline">
+                  admin@nextappfactory.com
+                </a>
+              ) : (
+                <p className="text-sm text-gray-500 leading-relaxed">{s.body}</p>
+              )}
             </div>
           ))}
         </div>
