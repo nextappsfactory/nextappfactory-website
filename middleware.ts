@@ -9,7 +9,7 @@ const SUBDOMAIN_MAP: Record<string, string> = {
 }
 
 export function middleware(request: NextRequest) {
-  const hostname = request.headers.get('host') || ''
+  const hostname = request.headers.get('x-forwarded-host') || request.headers.get('host') || ''
 
   // Strip port for local dev (e.g. stocklens.localhost:3000)
   const hostWithoutPort = hostname.split(':')[0]
