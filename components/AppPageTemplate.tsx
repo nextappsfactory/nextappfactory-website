@@ -13,6 +13,7 @@ export interface AppPageConfig {
   tagline: string
   description: string
   icon: string
+  iconImage?: string
   gradient: string
   accentColor: string
   lightBg: string
@@ -46,8 +47,12 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
           </Link>
 
           <div className="flex items-center gap-1">
-            <div className="app-icon w-6 h-6 flex items-center justify-center text-xs"
-              style={{ background: app.gradient }}>{app.icon}</div>
+            {app.iconImage ? (
+              <Image src={app.iconImage} alt={app.name} width={24} height={24} className="app-icon w-6 h-6 object-cover" />
+            ) : (
+              <div className="app-icon w-6 h-6 flex items-center justify-center text-xs"
+                style={{ background: app.gradient }}>{app.icon}</div>
+            )}
             <span className="font-semibold text-gray-900 text-sm ml-1.5">{app.name}</span>
           </div>
 
@@ -78,10 +83,16 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
           </span>
 
           {/* App Icon */}
-          <div className="app-icon w-24 h-24 mx-auto mb-6 flex items-center justify-center text-4xl shadow-xl"
-            style={{ background: app.gradient, boxShadow: `0 20px 50px ${app.accentColor}35` }}>
-            {app.icon}
-          </div>
+          {app.iconImage ? (
+            <Image src={app.iconImage} alt={app.name} width={96} height={96}
+              className="app-icon w-24 h-24 mx-auto mb-6 object-cover shadow-xl"
+              style={{ boxShadow: `0 20px 50px ${app.accentColor}35` }} />
+          ) : (
+            <div className="app-icon w-24 h-24 mx-auto mb-6 flex items-center justify-center text-4xl shadow-xl"
+              style={{ background: app.gradient, boxShadow: `0 20px 50px ${app.accentColor}35` }}>
+              {app.icon}
+            </div>
+          )}
 
           <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">{app.name}</h1>
           <p className="text-lg text-gray-500 max-w-md mx-auto mb-8 leading-relaxed">{app.tagline}</p>
@@ -235,7 +246,12 @@ export default function AppPageTemplate({ app }: { app: AppPageConfig }) {
           <div className="absolute inset-0 opacity-10"
             style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
           <div className="relative">
-            <div className="text-5xl mb-5">{app.icon}</div>
+            {app.iconImage ? (
+              <Image src={app.iconImage} alt={app.name} width={72} height={72}
+                className="app-icon w-18 h-18 mx-auto mb-5 object-cover" />
+            ) : (
+              <div className="text-5xl mb-5">{app.icon}</div>
+            )}
             <h2 className="text-3xl font-extrabold mb-3">Ready to try {app.name}?</h2>
             <p className="text-white/70 mb-8 text-sm max-w-sm mx-auto">
               Free to download on the App Store. No subscription required to get started.

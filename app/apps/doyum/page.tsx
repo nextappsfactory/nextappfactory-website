@@ -7,6 +7,7 @@ export default function DoyumPage() {
       tagline: 'AI-powered calorie tracking. Just snap a photo.',
       description: 'Doyum makes nutrition tracking effortless. Take a photo of any meal and our AI instantly identifies the food and logs the calories, macros, and nutrients. No more manual entry — just eat, snap, and stay on track.',
       icon: '🥗',
+      iconImage: '/doyum/icon.png',
       gradient: 'linear-gradient(135deg, #33CDBE, #FF6B6B)',
       accentColor: '#FF6B6B',
       lightBg: '#FFF1F1',
