@@ -5,6 +5,7 @@ const SUBDOMAIN_MAP: Record<string, string> = {
   stocklens: '/apps/stocklens',
   flipscout: '/apps/flipscout',
   tomescout: '/apps/tomescout',
+  tvremote: '/apps/tvremote',
   doyumai: '/apps/doyum',
 }
 
