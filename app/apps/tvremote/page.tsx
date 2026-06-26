@@ -7,6 +7,7 @@ export default function TVRemotePage() {
       tagline: 'Control any TV or device from your phone.',
       description: 'Universal Remote turns your iPhone into a smart remote for virtually any TV, streaming box, or home theater device. Connect over Wi-Fi or infrared and control your entire entertainment setup from one beautifully simple app.',
       icon: '📺',
+      iconImage: '/tvremote/icon.png',
       gradient: 'linear-gradient(135deg, #6366F1, #4338CA)',
       accentColor: '#6366F1',
       lightBg: '#EEF2FF',
