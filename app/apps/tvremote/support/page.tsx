@@ -2,12 +2,14 @@ import AppNav from '@/components/AppNav'
 import Footer from '@/components/Footer'
 
 const faqs = [
-  { q: 'Which TVs and devices are supported?', a: 'Universal Remote works with Samsung, LG, Sony, TCL, Vizio, Roku, Apple TV, Amazon Fire TV, and many more. If your device supports Wi-Fi control or is reachable via IR, it should work.' },
-  { q: 'My TV isn\'t being detected. What should I do?', a: 'Make sure your iPhone and TV are on the same Wi-Fi network. Try restarting your TV and re-opening the app. Some TVs require "Mobile Control" or "Smart View" to be enabled in their settings.' },
-  { q: 'Does it work without Wi-Fi?', a: 'Wi-Fi is required for smart TV control. IR-based control works without Wi-Fi on compatible iPhone models or with an IR accessory.' },
-  { q: 'How do I add a second TV?', a: 'Upgrade to the full version, then tap the device selector at the top of the remote screen and choose "Add Device." The app will scan your network for available TVs.' },
-  { q: 'How do I customize the remote layout?', a: 'Tap the layout icon in the top-right corner of the remote screen. You can drag, resize, and hide buttons to create your ideal layout. This feature requires the full unlock.' },
-  { q: 'How do I restore a purchase?', a: 'Go to Settings within the app and tap "Restore Purchases." Make sure you are signed in with the same Apple ID used for the original purchase.' },
+  { q: 'Which TVs and devices are supported?', a: 'Universal Remote controls Wi-Fi-connected TVs and streaming devices: Android TV / Google TV (Sony, TCL, Hisense, Philips and others), Roku, Samsung, LG, and Fire TV. Your iPhone and TV must be on the same Wi-Fi network.' },
+  { q: 'My TV isn\'t being detected. What should I do?', a: 'Make sure your iPhone and TV are on the same Wi-Fi (not a separate guest network). Re-open the app so a fresh pairing code appears on the TV, then enter it in the app. If the TV is asleep, tap Wake. You do not need to change any TV settings.' },
+  { q: 'Do I need to turn anything on in the TV\'s settings?', a: 'No. Universal Remote pairs over your network using a code shown on the TV — you don\'t need to enable IP Control, developer options, or anything else.' },
+  { q: 'How do I control more than one TV?', a: 'Every TV you pair is saved. Tap the TV name at the top of the remote to switch between them, and rename them (e.g. "Living Room" or "Bedroom") so they\'re easy to tell apart.' },
+  { q: 'Does the app track what I watch?', a: 'No. A remote can\'t see your TV screen. The app only stores, on your phone, the apps you open and searches you run inside it — and you can clear or turn that off anytime in Settings.' },
+  { q: 'What is the Bedtime Lock?', a: 'Set a time limit; when it\'s up, the TV turns off and the app keeps turning it back off — even if someone uses the TV\'s own remote. It works while the app stays running and the phone is powered and on the same Wi-Fi.' },
+  { q: 'Why won\'t some buttons (Options/Help/Settings) open the TV menus?', a: 'A remote can send navigation keys and launch apps, but some TV system screens aren\'t exposed to remote apps on every TV, so the TV may simply ignore those commands.' },
+  { q: 'How do I restore a purchase?', a: 'Open the upgrade screen in the app and tap "Restore Purchases," signed in with the same Apple ID used for the original purchase.' },
   { q: 'I have a feature request.', a: 'Email us at admin@nextappfactory.com with the subject line "Universal Remote Feature Request" — we read everything.' },
 ]
 

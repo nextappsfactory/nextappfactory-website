@@ -2,11 +2,13 @@ import AppNav from '@/components/AppNav'
 import Footer from '@/components/Footer'
 
 const sections = [
-  { title: 'Information We Collect', body: 'Universal Remote does not require an account to use. We do not collect or store personal information. The app discovers devices on your local Wi-Fi network solely to enable remote control — this data never leaves your device.' },
-  { title: 'Local Network Access', body: 'The app requests access to your local network to discover and communicate with compatible TVs and streaming devices. No network traffic is sent to our servers.' },
-  { title: 'Advertising', body: 'The free version of Universal Remote may display ads served by Google AdMob. AdMob may collect identifiers and usage data to serve relevant ads. You can review Google\'s privacy policy at policies.google.com/privacy.' },
-  { title: 'In-App Purchases', body: 'Any purchases are processed entirely by Apple through the App Store. We do not receive or store your payment information.' },
-  { title: 'Data Security', body: 'All device configurations and custom layouts are stored locally on your device. Nothing is uploaded to external servers.' },
+  { title: 'No Accounts, No Tracking', body: 'Universal Remote has no sign-in and no accounts. We do not run analytics servers, and we do not sell or share your data. Everything the app does happens on your device and your local Wi-Fi network.' },
+  { title: 'Local Network Access', body: 'The app uses your local network to discover your TV, pair with it using a code shown on the TV screen, and send remote commands. This traffic stays on your network and is never routed through our servers.' },
+  { title: 'On-Device Storage', body: 'Your saved TVs, custom names, and preferences are stored only on your device, in the iOS Keychain / secure storage. None of it is uploaded anywhere.' },
+  { title: 'App Usage History', body: 'If left enabled, the app keeps a local list of the apps you open and the searches you run inside Universal Remote, to power the "Recently used" row. This never leaves your phone, and you can turn it off or clear it anytime in Settings. A remote cannot see what is playing on your TV, so we do not — and cannot — record what you watch.' },
+  { title: 'No Ads', body: 'Universal Remote shows no advertisements and contains no advertising SDKs or third-party trackers.' },
+  { title: 'Subscriptions & Purchases', body: 'Optional Premium is offered as a yearly subscription or a one-time lifetime purchase, with a free trial. All payments are processed by Apple through the App Store — we never receive or store your payment details.' },
+  { title: 'Children', body: 'The app is not directed at children and does not knowingly collect personal information from anyone.' },
   { title: 'Changes', body: 'We may update this policy from time to time and will revise the effective date accordingly.' },
   { title: 'Contact', body: 'For privacy questions related to Universal Remote, email us at admin@nextappfactory.com.' },
 ]
@@ -27,7 +29,7 @@ export default function TVRemotePrivacyPage() {
         <div className="app-icon w-14 h-14 mx-auto mb-5 flex items-center justify-center text-2xl"
           style={{ background: 'linear-gradient(135deg, #6366F1, #4338CA)' }}>📺</div>
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
-        <p className="text-gray-400 text-sm">Universal Remote · Last updated June 22, 2026</p>
+        <p className="text-gray-400 text-sm">Universal Remote · Last updated June 26, 2026</p>
       </section>
 
       <section className="px-6 pb-32">
