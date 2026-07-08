@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server'
 import { telemetryDb } from '@/lib/firebase-telemetry'
-import { FieldValue } from 'firebase-admin/firestore'
+import { FieldValue, Timestamp } from 'firebase-admin/firestore'
+
+// Auto-diagnostics are high-volume and disposable — expire them after this many
+// days via a Firestore TTL policy on the `logs` collection group (field:
+// expiresAt). User reports have no expiresAt, so they're kept indefinitely.
+const LOG_TTL_DAYS = 90
 
 // Inbound telemetry from every app (TV Remote, Pay My Ticket, OathPath, …).
 //
@@ -57,6 +62,10 @@ export async function POST(req: Request) {
     logs: cap(body.logs, 4000),
     status: isLog ? 'logged' : 'new',
     createdAt: new Date().toISOString(),
+    // Only logs carry a TTL timestamp; reports are kept indefinitely.
+    ...(isLog
+      ? { expiresAt: Timestamp.fromMillis(Date.now() + LOG_TTL_DAYS * 86400000) }
+      : {}),
   }
 
   try {
