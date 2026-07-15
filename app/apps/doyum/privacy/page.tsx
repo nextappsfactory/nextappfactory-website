@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import AppNav from '@/components/AppNav'
 import Footer from '@/components/Footer'
 
@@ -6,16 +7,15 @@ export default function DoyumPrivacyPage() {
     <div className="min-h-screen" style={{ background: '#f5f5fa' }}>
       <AppNav
         appName="Doyum AI"
-        accentColor="#10B981"
-        gradient="linear-gradient(135deg, #10B981, #059669)"
+        accentColor="#FF6B6B"
+        gradient="linear-gradient(135deg, #33CDBE, #FF6B6B)"
         homeUrl="http://doyumai.nextappfactory.com"
         privacyUrl="http://doyumai.nextappfactory.com/privacy"
         supportUrl="http://doyumai.nextappfactory.com/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">
-        <div className="app-icon w-14 h-14 mx-auto mb-5 flex items-center justify-center text-2xl"
-          style={{ background: 'linear-gradient(135deg, #10B981, #059669)' }}>🍽</div>
+        <Image src="/doyum/icon.png" alt="Doyum AI" width={56} height={56} className="mx-auto mb-5 rounded-[14px]" />
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
         <p className="text-gray-400 text-sm">Doyum AI · Last updated July 15, 2026</p>
       </section>
