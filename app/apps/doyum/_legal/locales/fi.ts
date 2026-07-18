@@ -79,7 +79,7 @@ export const fi: LegalTranslation = {
   },
   privacy: {
     title: 'Tietosuojakäytäntö',
-    updated: 'Viimeksi päivitetty: 17. heinäkuuta 2026',
+    updated: 'Viimeksi päivitetty: 18. heinäkuuta 2026',
     intro:
       'Next App Factory LLC:n ylläpitämä Doyum AI ("me", "Sovellus") auttaa sinua seuraamaan ravitsemustasi arvioimalla kalorit ja makroravinteet aterioittesi kuvista. Tämä käytäntö kertoo, mitä keräämme, miksi ja mitkä ovat vaihtoehtosi.',
     sections: [
@@ -89,7 +89,7 @@ export const fi: LegalTranslation = {
           '• Tilitiedot — Doyum AI vaatii tilin. Kun kirjaudut Applella, Googlella tai sähköpostilla, saamme kirjautumistunnisteesi (sähköpostiosoitteen, joka voi olla Applen yksityinen välitysosoite) ja nimesi, jos se on annettu (Firebase Authenticationin kautta).',
           '• Profiili ja tavoitteet — biologinen sukupuoli, syntymäaika, pituus, paino, aktiivisuustaso ja tavoitteet, jotka syötät ravitsemustavoitteidesi laskemiseksi. Tiedot tallennetaan turvallisesti tilillesi, jotta ne synkronoituvat laitteidesi välillä; julkinen profiilisi rajoittuu näyttönimeen, @käyttäjätunnukseen ja siihen, mitä päätät jakaa.',
           '• Ateriakuvat ja lokit — ottamasi tai valitsemasi kuvat lähetetään palveluumme ja kolmannen osapuolen tekoälymallien tarjoajalle kalorien ja makroravinteiden arvioimiseksi. Emme käytä kuviasi tunnistamiseesi.',
-          '• Luomasi toiminta — ateriat, painomerkinnät, vedenjuonti, tavoitteet ja ruokakirjasto synkronoituvat tilillesi, joten historiasi seuraa sinua laitteiden välillä ja säilyy uudelleenasennuksissa. Ateria- ja edistymiskuvat pysyvät laitteellasi — kuvatiedostoja ei koskaan ladata palvelimelle. Valinnainen sosiaalinen sisältö jaetaan vain valitsemallesi yleisölle; kalorejasi ja painoasi ei koskaan jaeta sosiaalisesti.',
+          '• Luomasi toiminta — ateriat, painomerkinnät, vedenjuonti, tavoitteet ja ruokakirjasto synkronoituvat tilillesi, joten historiasi seuraa sinua laitteiden välillä ja säilyy uudelleenasennuksissa. Yksityiset ateria- ja edistymiskuvasi pysyvät laitteellasi, eikä niitä tallenneta tilillesi; kuvat lähetetään vain analyysia varten yllä kuvatulla tavalla. Valinnaiseen sosiaaliseen julkaisuun liittämäsi kuva ladataan ja näytetään vain valitsemallesi yleisölle; kalorejasi ja painoasi ei koskaan jaeta sosiaalisesti.',
           '• Maksutiedot — jos tilaat Doyum Pron, oston käsittelee kokonaan Apple. Emme koskaan näe korttitietojasi.',
           '• Diagnostiikka — perustason, tunnistamattomat käyttö- ja kaatumistiedot Sovelluksen toiminnan ylläpitämiseksi.',
         ],

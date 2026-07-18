@@ -21,7 +21,7 @@ export default function DoyumPrivacyPage({ searchParams }: { searchParams?: { la
       <section className="pt-36 pb-10 px-6 text-center">
         <Image src="/doyum/icon.png" alt="Doyum AI" width={56} height={56} className="mx-auto mb-5 rounded-[14px]" />
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{t ? t.privacy.title : 'Privacy Policy'}</h1>
-        <p className="text-gray-400 text-sm">Doyum AI · {t ? t.privacy.updated : 'Last updated July 17, 2026'}</p>
+        <p className="text-gray-400 text-sm">Doyum AI · {t ? t.privacy.updated : 'Last updated July 18, 2026'}</p>
         <div className="mt-4">
           <LanguagePicker active={t?.locale} />
         </div>
@@ -40,7 +40,7 @@ export default function DoyumPrivacyPage({ searchParams }: { searchParams?: { la
               <li><strong className="text-gray-700">Account info</strong> — Doyum AI requires an account. When you sign in with Apple, Google, or email we receive your sign-in identifier (email address, which may be an Apple private-relay address) and, where provided, your name (via Firebase Authentication).</li>
               <li><strong className="text-gray-700">Profile & goals</strong> — biological sex, date of birth, height, weight, activity level and goals you enter to calculate your nutrition targets. This data is stored securely in your account so it syncs across your devices; your public-facing profile is limited to display name, @handle and what you choose to share.</li>
               <li><strong className="text-gray-700">Meal photos & logs</strong> — photos you take or select are sent to our service and a third-party AI model provider to estimate calories and macros. We do not use your photos to identify you.</li>
-              <li><strong className="text-gray-700">Activity you create</strong> — meals, weight entries, water intake, goals and food library sync to your account so your history follows you across devices and survives reinstalls. Meal and progress <strong className="text-gray-700">photos stay on your device — photo files are never uploaded</strong>. Optional social content is shared only with the audience you choose; your calories and weight are never shared socially.</li>
+              <li><strong className="text-gray-700">Activity you create</strong> — meals, weight entries, water intake, goals and food library sync to your account so your history follows you across devices and survives reinstalls. Your private meal and progress <strong className="text-gray-700">photos stay on your device and are not stored in your account</strong>; photos are sent for analysis only as described above. If you attach a photo to an optional social post, that photo <strong className="text-gray-700">is uploaded and shown only to the audience you choose</strong>; your calories and weight are never shared socially.</li>
               <li><strong className="text-gray-700">Payment info</strong> — if you subscribe to Doyum Pro, the purchase is processed entirely by Apple. We never see your card details.</li>
               <li><strong className="text-gray-700">Diagnostics</strong> — basic, non-identifying usage and crash data to keep the App working.</li>
             </ul>

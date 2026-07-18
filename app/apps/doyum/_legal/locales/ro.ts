@@ -79,7 +79,7 @@ export const ro: LegalTranslation = {
   },
   privacy: {
     title: 'Politica de confidențialitate',
-    updated: 'Ultima actualizare: 17 iulie 2026',
+    updated: 'Ultima actualizare: 18 iulie 2026',
     intro:
       'Doyum AI („noi”, „Aplicația”), operată de Next App Factory LLC, vă ajută să vă monitorizați nutriția estimând caloriile și macronutrienții din fotografiile meselor dumneavoastră. Această politică explică ce colectăm, de ce și ce opțiuni aveți.',
     sections: [
@@ -89,7 +89,7 @@ export const ro: LegalTranslation = {
           '• Date de cont — Doyum AI necesită un cont. Când vă autentificați cu Apple, Google sau e-mail, primim identificatorul dumneavoastră de autentificare (adresa de e-mail, care poate fi o adresă privată de redirecționare Apple) și, dacă este furnizat, numele dumneavoastră (prin Firebase Authentication).',
           '• Profil și obiective — sexul biologic, data nașterii, înălțimea, greutatea, nivelul de activitate și obiectivele pe care le introduceți pentru calcularea țintelor nutriționale. Aceste date sunt stocate în siguranță în contul dumneavoastră pentru sincronizare între dispozitive; profilul public se limitează la numele afișat, @handle și ceea ce alegeți să distribuiți.',
           '• Fotografii ale meselor și jurnale — fotografiile pe care le faceți sau le selectați sunt trimise serviciului nostru și unui furnizor terț de modele AI pentru estimarea caloriilor și macronutrienților. Nu folosim fotografiile pentru a vă identifica.',
-          '• Activitatea creată — mesele, înregistrările de greutate, consumul de apă, obiectivele și biblioteca de alimente se sincronizează cu contul dumneavoastră, astfel încât istoricul vă urmează între dispozitive și rezistă reinstalărilor. Fotografiile meselor și ale progresului rămân pe dispozitivul dumneavoastră — fișierele foto nu sunt niciodată încărcate. Conținutul social opțional este distribuit doar publicului ales; caloriile și greutatea nu sunt niciodată distribuite social.',
+          '• Activitatea creată — mesele, înregistrările de greutate, consumul de apă, obiectivele și biblioteca de alimente se sincronizează cu contul dumneavoastră, astfel încât istoricul vă urmează între dispozitive și rezistă reinstalărilor. Fotografiile private ale meselor și progresului rămân pe dispozitivul dumneavoastră și nu sunt stocate în contul dumneavoastră; fotografiile sunt trimise doar pentru analiză, conform descrierii de mai sus. O fotografie atașată unei postări sociale opționale este încărcată și afișată doar publicului ales; caloriile și greutatea nu sunt niciodată distribuite social.',
           '• Date de plată — dacă vă abonați la Doyum Pro, achiziția este procesată integral de Apple. Nu vedem niciodată datele cardului dumneavoastră.',
           '• Diagnosticare — date de utilizare și de eroare de bază, neidentificabile, pentru a menține Aplicația funcțională.',
         ],

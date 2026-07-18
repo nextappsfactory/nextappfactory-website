@@ -79,7 +79,7 @@ export const da: LegalTranslation = {
   },
   privacy: {
     title: 'Privatlivspolitik',
-    updated: 'Senest opdateret: 17. juli 2026',
+    updated: 'Senest opdateret: 18. juli 2026',
     intro:
       'Doyum AI ("vi", "os", "Appen"), der drives af Next App Factory LLC, hjælper dig med at følge din ernæring ved at estimere kalorier og makronæringsstoffer ud fra billeder af dine måltider. Denne politik forklarer, hvad vi indsamler, hvorfor, og hvilke valg du har.',
     sections: [
@@ -89,7 +89,7 @@ export const da: LegalTranslation = {
           '• Kontooplysninger — Doyum AI kræver en konto. Når du logger ind med Apple, Google eller e-mail, modtager vi din login-identifikator (e-mailadresse, som kan være en privat videresendelsesadresse fra Apple) og, hvis oplyst, dit navn (via Firebase Authentication).',
           '• Profil og mål — biologisk køn, fødselsdato, højde, vægt, aktivitetsniveau og mål, som du indtaster for at beregne dine ernæringsmål. Disse data opbevares sikkert på din konto, så de synkroniseres mellem dine enheder; din offentlige profil er begrænset til visningsnavn, @handle og det, du vælger at dele.',
           '• Madbilleder og logs — billeder, du tager eller vælger, sendes til vores tjeneste og en tredjeparts AI-modelleverandør for at estimere kalorier og makronæringsstoffer. Vi bruger ikke dine billeder til at identificere dig.',
-          '• Aktivitet, du opretter — måltider, vægtregistreringer, vandindtag, mål og fødevarebibliotek synkroniseres med din konto, så din historik følger dig mellem enheder og overlever geninstallationer. Mad- og fremskridtsbilleder bliver på din enhed — billedfiler uploades aldrig. Valgfrit socialt indhold deles kun med det publikum, du vælger; dine kalorier og din vægt deles aldrig socialt.',
+          '• Aktivitet, du opretter — måltider, vægtregistreringer, vandindtag, mål og fødevarebibliotek synkroniseres med din konto, så din historik følger dig mellem enheder og overlever geninstallationer. Dine private mad- og fremskridtsbilleder bliver på din enhed og gemmes ikke på din konto; billeder sendes kun til analyse som beskrevet ovenfor. Et billede, du vedhæfter et valgfrit socialt opslag, uploades og vises kun for det publikum, du vælger; dine kalorier og din vægt deles aldrig socialt.',
           '• Betalingsoplysninger — hvis du abonnerer på Doyum Pro, behandles købet fuldt ud af Apple. Vi ser aldrig dine kortoplysninger.',
           '• Diagnostik — grundlæggende, ikke-identificerende brugs- og nedbrudsdata for at holde Appen kørende.',
         ],

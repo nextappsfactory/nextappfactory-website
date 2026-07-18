@@ -79,7 +79,7 @@ export const cs: LegalTranslation = {
   },
   privacy: {
     title: 'Zásady ochrany osobních údajů',
-    updated: 'Poslední aktualizace: 17. července 2026',
+    updated: 'Poslední aktualizace: 18. července 2026',
     intro:
       'Doyum AI („my“, „nás“, „Aplikace“), provozovaná společností Next App Factory LLC, vám pomáhá sledovat výživu odhadem kalorií a makroživin z fotografií vašich jídel. Tyto zásady vysvětlují, co shromažďujeme, proč a jaké máte možnosti.',
     sections: [
@@ -89,7 +89,7 @@ export const cs: LegalTranslation = {
           '• Údaje o účtu — Doyum AI vyžaduje účet. Když se přihlásíte přes Apple, Google nebo e-mail, obdržíme váš přihlašovací identifikátor (e-mailovou adresu, která může být soukromou přeposílací adresou Apple) a, pokud je uvedeno, vaše jméno (přes Firebase Authentication).',
           '• Profil a cíle — biologické pohlaví, datum narození, výška, váha, úroveň aktivity a cíle, které zadáváte pro výpočet výživových cílů. Tato data jsou bezpečně uložena ve vašem účtu a synchronizují se mezi zařízeními; váš veřejný profil je omezen na zobrazované jméno, @handle a to, co se rozhodnete sdílet.',
           '• Fotografie jídla a záznamy — fotografie, které pořídíte nebo vyberete, se odesílají naší službě a externímu poskytovateli AI modelů k odhadu kalorií a makroživin. Vaše fotografie nepoužíváme k vaší identifikaci.',
-          '• Aktivita, kterou vytvoříte — jídla, záznamy váhy, příjem vody, cíle a knihovna potravin se synchronizují s vaším účtem, takže vás historie provází mezi zařízeními a přežije přeinstalace. Fotografie jídel a pokroku zůstávají ve vašem zařízení — soubory fotografií se nikdy nenahrávají. Volitelný sociální obsah se sdílí pouze s publikem, které si zvolíte; vaše kalorie a váha se nikdy sociálně nesdílejí.',
+          '• Aktivita, kterou vytvoříte — jídla, záznamy váhy, příjem vody, cíle a knihovna potravin se synchronizují s vaším účtem, takže vás historie provází mezi zařízeními a přežije přeinstalace. Vaše soukromé fotografie jídel a pokroku zůstávají ve vašem zařízení a neukládají se do vašeho účtu; fotografie se odesílají pouze k analýze, jak je popsáno výše. Fotografie připojená k volitelnému sociálnímu příspěvku se nahraje a zobrazí pouze publiku, které si zvolíte; vaše kalorie a váha se nikdy sociálně nesdílejí.',
           '• Platební údaje — pokud si předplatíte Doyum Pro, nákup zpracovává výhradně Apple. Údaje o vaší kartě nikdy nevidíme.',
           '• Diagnostika — základní, neidentifikující údaje o používání a pádech, aby Aplikace fungovala.',
         ],

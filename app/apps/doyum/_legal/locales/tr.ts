@@ -79,7 +79,7 @@ export const tr: LegalTranslation = {
   },
   privacy: {
     title: 'Gizlilik Politikası',
-    updated: 'Son güncelleme: 17 Temmuz 2026',
+    updated: 'Son güncelleme: 18 Temmuz 2026',
     intro:
       'Next App Factory LLC tarafından işletilen Doyum AI ("biz", "bize", "Uygulama"), yemek fotoğraflarınızdan kalori ve makro tahminleri yaparak beslenmenizi takip etmenize yardımcı olur. Bu politika neleri, neden topladığımızı ve seçeneklerinizi açıklar.',
     sections: [
@@ -89,7 +89,7 @@ export const tr: LegalTranslation = {
           '• Hesap bilgileri — Doyum AI bir hesap gerektirir. Apple, Google veya e-posta ile oturum açtığınızda, oturum açma tanımlayıcınızı (Apple gizli aktarma adresi olabilecek e-posta adresiniz) ve varsa adınızı (Firebase Authentication aracılığıyla) alırız.',
           '• Profil ve hedefler — beslenme hedeflerinizi hesaplamak için girdiğiniz biyolojik cinsiyet, doğum tarihi, boy, kilo, aktivite düzeyi ve hedefler. Bu veriler, cihazlarınız arasında eşitlenmesi için hesabınızda güvenle saklanır; herkese açık profiliniz görünen ad, @kullanıcıadı ve paylaşmayı seçtiklerinizle sınırlıdır.',
           '• Yemek fotoğrafları ve kayıtları — çektiğiniz veya seçtiğiniz fotoğraflar, kalori ve makro tahmini için hizmetimize ve üçüncü taraf bir yapay zekâ modeli sağlayıcısına gönderilir. Fotoğraflarınızı sizi tanımlamak için kullanmayız.',
-          '• Oluşturduğunuz etkinlikler — yemekler, kilo kayıtları, su tüketimi, hedefler ve yiyecek kitaplığı hesabınıza eşitlenir; böylece geçmişiniz cihazlar arasında sizi takip eder ve yeniden yüklemelerde korunur. Yemek ve ilerleme fotoğrafları cihazınızda kalır — fotoğraf dosyaları asla yüklenmez. İsteğe bağlı sosyal içerik yalnızca seçtiğiniz kitleyle paylaşılır; kalorileriniz ve kilonuz asla sosyal olarak paylaşılmaz.',
+          '• Oluşturduğunuz etkinlikler — yemekler, kilo kayıtları, su tüketimi, hedefler ve yiyecek kitaplığı hesabınıza eşitlenir; böylece geçmişiniz cihazlar arasında sizi takip eder ve yeniden yüklemelerde korunur. Özel yemek ve ilerleme fotoğraflarınız cihazınızda kalır ve hesabınızda saklanmaz; fotoğraflar yalnızca yukarıda açıklandığı şekilde analiz için gönderilir. İsteğe bağlı bir sosyal gönderiye eklediğiniz fotoğraf ise yüklenir ve yalnızca seçtiğiniz kitleye gösterilir; kalorileriniz ve kilonuz asla sosyal olarak paylaşılmaz.',
           '• Ödeme bilgileri — Doyum Pro aboneliği satın alırsanız, ödeme tamamen Apple tarafından işlenir. Kart bilgilerinizi hiçbir zaman görmeyiz.',
           '• Tanılama — Uygulamanın çalışır durumda kalması için temel, kimlik belirtmeyen kullanım ve çökme verileri.',
         ],

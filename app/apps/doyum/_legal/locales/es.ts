@@ -79,7 +79,7 @@ export const es: LegalTranslation = {
   },
   privacy: {
     title: 'Política de Privacidad',
-    updated: 'Última actualización: 17 de julio de 2026',
+    updated: 'Última actualización: 18 de julio de 2026',
     intro:
       'Doyum AI («nosotros», la «App»), operada por Next App Factory LLC, le ayuda a hacer seguimiento de su nutrición estimando calorías y macronutrientes a partir de fotos de sus comidas. Esta política explica qué recopilamos, por qué y cuáles son sus opciones.',
     sections: [
@@ -89,7 +89,7 @@ export const es: LegalTranslation = {
           '• Datos de la cuenta — Doyum AI requiere una cuenta. Cuando inicia sesión con Apple, Google o correo electrónico, recibimos su identificador de inicio de sesión (dirección de correo electrónico, que puede ser una dirección privada de reenvío de Apple) y, si se proporciona, su nombre (a través de Firebase Authentication).',
           '• Perfil y objetivos — sexo biológico, fecha de nacimiento, estatura, peso, nivel de actividad y objetivos que usted introduce para calcular sus metas nutricionales. Estos datos se almacenan de forma segura en su cuenta para sincronizarse entre sus dispositivos; su perfil público se limita al nombre visible, el @usuario y lo que usted decida compartir.',
           '• Fotos de comidas y registros — las fotos que toma o selecciona se envían a nuestro servicio y a un proveedor externo de modelos de IA para estimar calorías y macronutrientes. No usamos sus fotos para identificarle.',
-          '• Actividad que usted crea — comidas, registros de peso, ingesta de agua, objetivos y biblioteca de alimentos se sincronizan con su cuenta, de modo que su historial le acompaña entre dispositivos y sobrevive a las reinstalaciones. Las fotos de comidas y de progreso permanecen en su dispositivo — los archivos de fotos nunca se suben. El contenido social opcional se comparte solo con la audiencia que usted elija; sus calorías y su peso nunca se comparten socialmente.',
+          '• Actividad que usted crea — comidas, registros de peso, ingesta de agua, objetivos y biblioteca de alimentos se sincronizan con su cuenta, de modo que su historial le acompaña entre dispositivos y sobrevive a las reinstalaciones. Sus fotos privadas de comidas y de progreso permanecen en su dispositivo y no se almacenan en su cuenta; las fotos se envían solo para su análisis, como se describe arriba. La foto que adjunte a una publicación social opcional se sube y se muestra solo a la audiencia que usted elija; sus calorías y su peso nunca se comparten socialmente.',
           '• Datos de pago — si se suscribe a Doyum Pro, la compra la procesa íntegramente Apple. Nunca vemos los datos de su tarjeta.',
           '• Diagnósticos — datos básicos y no identificativos de uso y fallos para mantener la App en funcionamiento.',
         ],
