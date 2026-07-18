@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import AppNav from '@/components/AppNav'
 import Footer from '@/components/Footer'
+import { legalTranslationFor } from '../_legal'
+import LanguagePicker from '../_legal/LanguagePicker'
+import TranslatedLegalDoc from '../_legal/TranslatedLegalDoc'
 
-export default function DoyumPrivacyPage() {
+export default function DoyumPrivacyPage({ searchParams }: { searchParams?: { lang?: string } }) {
+  const t = legalTranslationFor(searchParams?.lang)
   return (
     <div className="min-h-screen" style={{ background: '#f5f5fa' }}>
       <AppNav
@@ -16,11 +20,17 @@ export default function DoyumPrivacyPage() {
 
       <section className="pt-36 pb-10 px-6 text-center">
         <Image src="/doyum/icon.png" alt="Doyum AI" width={56} height={56} className="mx-auto mb-5 rounded-[14px]" />
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
-        <p className="text-gray-400 text-sm">Doyum AI · Last updated July 15, 2026</p>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{t ? t.privacy.title : 'Privacy Policy'}</h1>
+        <p className="text-gray-400 text-sm">Doyum AI · {t ? t.privacy.updated : 'Last updated July 17, 2026'}</p>
+        <div className="mt-4">
+          <LanguagePicker active={t?.locale} />
+        </div>
       </section>
 
       <section className="px-6 pb-32">
+        {t ? (
+          <TranslatedLegalDoc t={t} doc={t.privacy} />
+        ) : (
         <div className="max-w-2xl mx-auto bg-white border border-[#e8e8f0] rounded-3xl p-8 shadow-sm space-y-7 text-sm text-gray-500 leading-relaxed">
           <p>Doyum AI ("we", "us", the "App"), operated by Next App Factory LLC, helps you track nutrition by estimating calories and macros from photos of your meals. This policy explains what we collect, why, and your choices.</p>
 
@@ -92,10 +102,16 @@ export default function DoyumPrivacyPage() {
           </div>
 
           <div>
+            <h2 className="text-sm font-bold text-gray-900 mb-2">Governing language</h2>
+            <p>This Privacy Policy is drafted in English. Translations are provided for convenience only. If a translation conflicts with the English version, the English version governs to the extent permitted by applicable law.</p>
+          </div>
+
+          <div>
             <h2 className="text-sm font-bold text-gray-900 mb-2">Contact</h2>
             <p>Questions or requests: <a href="mailto:admin@nextappfactory.com" className="text-emerald-600 hover:underline">admin@nextappfactory.com</a></p>
           </div>
         </div>
+        )}
       </section>
 
       <Footer />
