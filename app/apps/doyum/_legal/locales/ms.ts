@@ -79,7 +79,7 @@ export const ms: LegalTranslation = {
   },
   privacy: {
     title: 'Dasar Privasi',
-    updated: 'Kemas kini terakhir: 17 Julai 2026',
+    updated: 'Kemas kini terakhir: 18 Julai 2026',
     intro:
       'Doyum AI ("kami", "Aplikasi"), yang dikendalikan oleh Next App Factory LLC, membantu anda menjejaki pemakanan dengan menganggarkan kalori dan makronutrien daripada foto makanan anda. Dasar ini menerangkan apa yang kami kumpul, sebabnya, dan pilihan anda.',
     sections: [
@@ -89,7 +89,7 @@ export const ms: LegalTranslation = {
           '• Maklumat akaun — Doyum AI memerlukan akaun. Apabila anda log masuk dengan Apple, Google atau e-mel, kami menerima pengecam log masuk anda (alamat e-mel, yang mungkin merupakan alamat geganti peribadi Apple) dan, jika diberikan, nama anda (melalui Firebase Authentication).',
           '• Profil & matlamat — jantina biologi, tarikh lahir, ketinggian, berat, tahap aktiviti dan matlamat yang anda masukkan untuk mengira sasaran pemakanan anda. Data ini disimpan dengan selamat dalam akaun anda supaya disegerakkan antara peranti; profil awam anda terhad kepada nama paparan, @handle dan perkara yang anda pilih untuk dikongsi.',
           '• Foto makanan & rekod — foto yang anda ambil atau pilih dihantar ke perkhidmatan kami dan pembekal model AI pihak ketiga untuk menganggarkan kalori dan makronutrien. Kami tidak menggunakan foto anda untuk mengenal pasti anda.',
-          '• Aktiviti yang anda cipta — hidangan, rekod berat, pengambilan air, matlamat dan perpustakaan makanan disegerakkan ke akaun anda, jadi sejarah anda mengikuti anda antara peranti dan kekal selepas pemasangan semula. Foto makanan dan kemajuan kekal pada peranti anda — fail foto tidak pernah dimuat naik. Kandungan sosial pilihan hanya dikongsi dengan audiens yang anda pilih; kalori dan berat anda tidak pernah dikongsi secara sosial.',
+          '• Aktiviti yang anda cipta — hidangan, rekod berat, pengambilan air, matlamat dan perpustakaan makanan disegerakkan ke akaun anda, jadi sejarah anda mengikuti anda antara peranti dan kekal selepas pemasangan semula. Foto makanan dan kemajuan peribadi anda kekal pada peranti anda dan tidak disimpan dalam akaun anda; foto hanya dihantar untuk analisis seperti yang diterangkan di atas. Foto yang anda lampirkan pada kiriman sosial pilihan akan dimuat naik dan hanya dipaparkan kepada audiens yang anda pilih; kalori dan berat anda tidak pernah dikongsi secara sosial.',
           '• Maklumat pembayaran — jika anda melanggan Doyum Pro, pembelian diproses sepenuhnya oleh Apple. Kami tidak pernah melihat butiran kad anda.',
           '• Diagnostik — data penggunaan dan ranap yang asas dan tidak mengenal pasti, untuk memastikan Aplikasi berfungsi.',
         ],

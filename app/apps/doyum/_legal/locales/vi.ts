@@ -79,7 +79,7 @@ export const vi: LegalTranslation = {
   },
   privacy: {
     title: 'Chính sách Quyền riêng tư',
-    updated: 'Cập nhật lần cuối: 17 tháng 7, 2026',
+    updated: 'Cập nhật lần cuối: 18 tháng 7, 2026',
     intro:
       'Doyum AI ("chúng tôi", "Ứng dụng"), do Next App Factory LLC vận hành, giúp bạn theo dõi dinh dưỡng bằng cách ước tính calo và các chất dinh dưỡng đa lượng từ ảnh bữa ăn của bạn. Chính sách này giải thích chúng tôi thu thập gì, vì sao, và các lựa chọn của bạn.',
     sections: [
@@ -89,7 +89,7 @@ export const vi: LegalTranslation = {
           '• Thông tin tài khoản — Doyum AI yêu cầu tài khoản. Khi bạn đăng nhập bằng Apple, Google hoặc email, chúng tôi nhận mã định danh đăng nhập của bạn (địa chỉ email, có thể là địa chỉ chuyển tiếp riêng tư của Apple) và tên của bạn nếu được cung cấp (qua Firebase Authentication).',
           '• Hồ sơ & mục tiêu — giới tính sinh học, ngày sinh, chiều cao, cân nặng, mức độ hoạt động và mục tiêu bạn nhập để tính các chỉ tiêu dinh dưỡng. Dữ liệu này được lưu an toàn trong tài khoản để đồng bộ giữa các thiết bị; hồ sơ công khai của bạn chỉ giới hạn ở tên hiển thị, @handle và những gì bạn chọn chia sẻ.',
           '• Ảnh bữa ăn & nhật ký — ảnh bạn chụp hoặc chọn được gửi đến dịch vụ của chúng tôi và nhà cung cấp mô hình AI bên thứ ba để ước tính calo và chất dinh dưỡng đa lượng. Chúng tôi không dùng ảnh của bạn để nhận dạng bạn.',
-          '• Hoạt động bạn tạo — bữa ăn, số đo cân nặng, lượng nước uống, mục tiêu và thư viện thực phẩm đồng bộ với tài khoản của bạn, để lịch sử theo bạn giữa các thiết bị và không mất khi cài lại. Ảnh bữa ăn và ảnh tiến trình ở lại trên thiết bị của bạn — tệp ảnh không bao giờ được tải lên. Nội dung xã hội tùy chọn chỉ được chia sẻ với đối tượng bạn chọn; calo và cân nặng của bạn không bao giờ được chia sẻ xã hội.',
+          '• Hoạt động bạn tạo — bữa ăn, số đo cân nặng, lượng nước uống, mục tiêu và thư viện thực phẩm đồng bộ với tài khoản của bạn, để lịch sử theo bạn giữa các thiết bị và không mất khi cài lại. Ảnh bữa ăn và ảnh tiến trình riêng tư của bạn ở lại trên thiết bị và không được lưu trong tài khoản; ảnh chỉ được gửi đi để phân tích như mô tả ở trên. Ảnh bạn đính kèm vào bài đăng xã hội tùy chọn sẽ được tải lên và chỉ hiển thị với đối tượng bạn chọn; calo và cân nặng của bạn không bao giờ được chia sẻ xã hội.',
           '• Thông tin thanh toán — nếu bạn đăng ký Doyum Pro, giao dịch mua hoàn toàn do Apple xử lý. Chúng tôi không bao giờ thấy thông tin thẻ của bạn.',
           '• Chẩn đoán — dữ liệu sử dụng và sự cố cơ bản, không định danh, để giữ Ứng dụng hoạt động ổn định.',
         ],

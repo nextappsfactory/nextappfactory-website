@@ -79,7 +79,7 @@ export const nl: LegalTranslation = {
   },
   privacy: {
     title: 'Privacybeleid',
-    updated: 'Laatst bijgewerkt: 17 juli 2026',
+    updated: 'Laatst bijgewerkt: 18 juli 2026',
     intro:
       'Doyum AI ("wij", "ons", de "App"), geëxploiteerd door Next App Factory LLC, helpt u uw voeding bij te houden door calorieën en macronutriënten te schatten op basis van foto\'s van uw maaltijden. Dit beleid legt uit wat wij verzamelen, waarom, en welke keuzes u heeft.',
     sections: [
@@ -89,7 +89,7 @@ export const nl: LegalTranslation = {
           '• Accountgegevens — Doyum AI vereist een account. Wanneer u inlogt met Apple, Google of e-mail ontvangen wij uw inlogidentificatie (e-mailadres, dat een privé-doorstuuradres van Apple kan zijn) en, indien opgegeven, uw naam (via Firebase Authentication).',
           '• Profiel en doelen — biologisch geslacht, geboortedatum, lengte, gewicht, activiteitsniveau en doelen die u invoert om uw voedingsdoelen te berekenen. Deze gegevens worden veilig in uw account opgeslagen zodat ze tussen uw apparaten synchroniseren; uw openbare profiel is beperkt tot weergavenaam, @handle en wat u kiest te delen.',
           '• Maaltijdfoto\'s en logboeken — foto\'s die u maakt of selecteert, worden naar onze dienst en een externe aanbieder van AI-modellen gestuurd om calorieën en macronutriënten te schatten. Wij gebruiken uw foto\'s niet om u te identificeren.',
-          '• Activiteit die u aanmaakt — maaltijden, gewichtsregistraties, waterinname, doelen en voedingsbibliotheek synchroniseren met uw account, zodat uw geschiedenis u volgt tussen apparaten en herinstallaties overleeft. Maaltijd- en voortgangsfoto\'s blijven op uw apparaat — fotobestanden worden nooit geüpload. Optionele sociale content wordt alleen gedeeld met het publiek dat u kiest; uw calorieën en gewicht worden nooit sociaal gedeeld.',
+          '• Activiteit die u aanmaakt — maaltijden, gewichtsregistraties, waterinname, doelen en voedingsbibliotheek synchroniseren met uw account, zodat uw geschiedenis u volgt tussen apparaten en herinstallaties overleeft. Uw privéfoto\'s van maaltijden en voortgang blijven op uw apparaat en worden niet in uw account opgeslagen; foto\'s worden alleen ter analyse verzonden, zoals hierboven beschreven. Een foto die u aan een optioneel sociaal bericht toevoegt, wordt geüpload en alleen getoond aan het publiek dat u kiest; uw calorieën en gewicht worden nooit sociaal gedeeld.',
           '• Betaalgegevens — als u zich abonneert op Doyum Pro, wordt de aankoop volledig door Apple verwerkt. Wij zien uw kaartgegevens nooit.',
           '• Diagnostiek — basale, niet-identificerende gebruiks- en crashgegevens om de App werkend te houden.',
         ],

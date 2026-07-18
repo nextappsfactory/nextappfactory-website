@@ -79,7 +79,7 @@ export const hu: LegalTranslation = {
   },
   privacy: {
     title: 'Adatvédelmi tájékoztató',
-    updated: 'Utolsó frissítés: 2026. július 17.',
+    updated: 'Utolsó frissítés: 2026. július 18.',
     intro:
       'A Next App Factory LLC által üzemeltetett Doyum AI („mi”, az „Alkalmazás”) az ételeiről készült fotók alapján becsüli meg a kalóriákat és makrotápanyagokat, segítve táplálkozása nyomon követését. Ez a tájékoztató bemutatja, mit gyűjtünk, miért, és milyen választási lehetőségei vannak.',
     sections: [
@@ -89,7 +89,7 @@ export const hu: LegalTranslation = {
           '• Fiókadatok — a Doyum AI használatához fiók szükséges. Ha Apple-lel, Google-lel vagy e-maillel jelentkezik be, megkapjuk bejelentkezési azonosítóját (e-mail-címét, amely lehet Apple privát továbbítási cím is), és ha megadta, a nevét (a Firebase Authentication révén).',
           '• Profil és célok — a táplálkozási célok kiszámításához megadott biológiai nem, születési dátum, magasság, testsúly, aktivitási szint és célok. Ezeket az adatokat biztonságosan tároljuk fiókjában, hogy eszközei között szinkronizálódjanak; nyilvános profilja a megjelenített névre, a @felhasználónévre és az Ön által megosztani kívánt tartalmakra korlátozódik.',
           '• Ételfotók és naplók — az Ön által készített vagy kiválasztott fotókat szolgáltatásunknak és egy külső AI-modell-szolgáltatónak küldjük el a kalóriák és makrotápanyagok becsléséhez. Fotóit nem használjuk az Ön azonosítására.',
-          '• Az Ön által létrehozott tevékenység — az étkezések, súlybejegyzések, vízfogyasztás, célok és ételkönyvtár szinkronizálódnak fiókjával, így előzményei követik Önt az eszközök között, és túlélik az újratelepítéseket. Az étel- és haladási fotók az eszközén maradnak — a fotófájlok soha nem kerülnek feltöltésre. Az opcionális közösségi tartalom csak az Ön által választott közönséggel kerül megosztásra; kalóriái és testsúlya soha nem kerülnek közösségi megosztásra.',
+          '• Az Ön által létrehozott tevékenység — az étkezések, súlybejegyzések, vízfogyasztás, célok és ételkönyvtár szinkronizálódnak fiókjával, így előzményei követik Önt az eszközök között, és túlélik az újratelepítéseket. Privát étel- és haladási fotói az eszközén maradnak, és nem tárolódnak a fiókjában; a fotókat kizárólag elemzés céljából küldjük el, a fent leírtak szerint. Az opcionális közösségi bejegyzéshez csatolt fotó feltöltésre kerül, és csak az Ön által választott közönségnek jelenik meg; kalóriái és testsúlya soha nem kerülnek közösségi megosztásra.',
           '• Fizetési adatok — ha előfizet a Doyum Próra, a vásárlást teljes egészében az Apple dolgozza fel. Kártyaadatait soha nem látjuk.',
           '• Diagnosztika — alapvető, nem azonosító használati és összeomlási adatok az Alkalmazás működésének fenntartásához.',
         ],
