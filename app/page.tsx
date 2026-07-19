@@ -106,7 +106,7 @@ const APPS = [
     lightBg: '#FFF1F1',
     price: 'Free',
     priceLabel: 'Coming soon',
-    href: 'https://doyumai.nextappfactory.com',
+    href: 'https://doyum.ai',
     features: [
       'AI calorie & macro estimates from a photo',
       'Daily targets, streaks & progress',
@@ -586,7 +586,7 @@ export default function HomePage() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: 52 }}>
-            <a href="https://doyumai.nextappfactory.com" className="btn-primary" style={{ background: '#FF6B6B' }}>
+            <a href="https://doyum.ai" className="btn-primary" style={{ background: '#FF6B6B' }}>
               Learn more about Doyum AI
             </a>
           </div>

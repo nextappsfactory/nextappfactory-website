@@ -13,9 +13,9 @@ export default function DoyumPrivacyPage({ searchParams }: { searchParams?: { la
         appName="Doyum AI"
         accentColor="#FF6B6B"
         gradient="linear-gradient(135deg, #33CDBE, #FF6B6B)"
-        homeUrl="http://doyumai.nextappfactory.com"
-        privacyUrl="http://doyumai.nextappfactory.com/privacy"
-        supportUrl="http://doyumai.nextappfactory.com/support"
+        homeUrl="https://doyum.ai"
+        privacyUrl="https://doyum.ai/privacy"
+        supportUrl="https://doyum.ai/support"
       />
 
       <section className="pt-36 pb-10 px-6 text-center">

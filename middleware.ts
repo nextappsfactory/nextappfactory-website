@@ -9,11 +9,25 @@ const SUBDOMAIN_MAP: Record<string, string> = {
   doyumai: '/apps/doyum',
 }
 
+// Standalone custom domains, matched on the full host before subdomain parsing
+const DOMAIN_MAP: Record<string, string> = {
+  'doyum.ai': '/apps/doyum',
+  'www.doyum.ai': '/apps/doyum',
+}
+
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get('x-forwarded-host') || request.headers.get('host') || ''
 
   // Strip port for local dev (e.g. stocklens.localhost:3000)
   const hostWithoutPort = hostname.split(':')[0]
+
+  if (DOMAIN_MAP[hostWithoutPort]) {
+    const url = request.nextUrl.clone()
+    const basePath = DOMAIN_MAP[hostWithoutPort]
+    const currentPath = request.nextUrl.pathname
+    url.pathname = currentPath === '/' ? basePath : basePath + currentPath
+    return NextResponse.rewrite(url)
+  }
 
   // Extract subdomain
   // Handles: stocklens.nextappfactory.com and stocklens.localhost
