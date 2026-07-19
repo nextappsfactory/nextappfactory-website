@@ -6,13 +6,14 @@ const SUBDOMAIN_MAP: Record<string, string> = {
   flipscout: '/apps/flipscout',
   tomescout: '/apps/tomescout',
   tvremote: '/apps/tvremote',
-  doyumai: '/apps/doyum',
 }
 
-// Standalone custom domains, matched on the full host before subdomain parsing
-const DOMAIN_MAP: Record<string, string> = {
-  'doyum.ai': '/apps/doyum',
-  'www.doyum.ai': '/apps/doyum',
+// Hosts whose site moved to its own domain; redirect and preserve the path
+// (doyumai.nextappfactory.com is the App Store privacy/support URL for Doyum)
+const REDIRECT_MAP: Record<string, string> = {
+  'doyumai.nextappfactory.com': 'https://doyum.ai',
+  'doyum.ai': 'https://doyum.ai',
+  'www.doyum.ai': 'https://doyum.ai',
 }
 
 export function middleware(request: NextRequest) {
@@ -21,12 +22,11 @@ export function middleware(request: NextRequest) {
   // Strip port for local dev (e.g. stocklens.localhost:3000)
   const hostWithoutPort = hostname.split(':')[0]
 
-  if (DOMAIN_MAP[hostWithoutPort]) {
-    const url = request.nextUrl.clone()
-    const basePath = DOMAIN_MAP[hostWithoutPort]
-    const currentPath = request.nextUrl.pathname
-    url.pathname = currentPath === '/' ? basePath : basePath + currentPath
-    return NextResponse.rewrite(url)
+  if (REDIRECT_MAP[hostWithoutPort]) {
+    const target = new URL(REDIRECT_MAP[hostWithoutPort])
+    target.pathname = request.nextUrl.pathname
+    target.search = request.nextUrl.search
+    return NextResponse.redirect(target, 308)
   }
 
   // Extract subdomain

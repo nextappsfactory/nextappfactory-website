@@ -19,9 +19,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://tomescout.nextappfactory.com', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: 'https://tomescout.nextappfactory.com/privacy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: 'https://tomescout.nextappfactory.com/support', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-    { url: 'https://doyum.ai', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: 'https://doyum.ai/privacy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: 'https://doyum.ai/terms', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: 'https://doyum.ai/support', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
   ]
 }
