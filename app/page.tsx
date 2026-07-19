@@ -98,7 +98,7 @@ const APPS = [
   {
     slug: 'doyumai',
     name: 'Doyum AI',
-    tagline: 'Snap a photo, instantly count calories & macros.',
+    tagline: 'Snap a photo to count calories — and share the journey with friends.',
     category: 'Health & Fitness',
     icon: '🥗',
     color: '#FF6B6B',
@@ -111,6 +111,7 @@ const APPS = [
       'AI calorie & macro estimates from a photo',
       'Daily targets, streaks & progress',
       'Water, weight & trend tracking',
+      'Moments, groups & chat with friends',
       'Available in 29 languages',
     ],
     mockup: null,

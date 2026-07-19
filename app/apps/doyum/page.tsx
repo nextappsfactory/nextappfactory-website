@@ -4,8 +4,8 @@ export default function DoyumPage() {
   return (
     <AppPageTemplate app={{
       name: 'Doyum AI',
-      tagline: 'AI-powered calorie tracking. Just snap a photo.',
-      description: 'Doyum makes nutrition tracking effortless. Take a photo of any meal and our AI instantly identifies the food and logs the calories, macros, and nutrients. No more manual entry — just eat, snap, and stay on track.',
+      tagline: 'AI-powered calorie tracking, together. Snap, log, share.',
+      description: 'Doyum makes nutrition tracking effortless — and social. Take a photo of any meal and our AI instantly identifies the food and logs the calories, macros, and nutrients. Then share Moments with friends, join groups, and keep each other on track. No more manual entry, no more going it alone.',
       icon: '🥗',
       iconImage: '/doyum/icon.png',
       gradient: 'linear-gradient(135deg, #33CDBE, #FF6B6B)',
@@ -24,6 +24,9 @@ export default function DoyumPage() {
         { icon: '📅', title: 'Daily Dashboard', desc: 'See your full day at a glance — meals logged, calories remaining, and macro balance.' },
         { icon: '🎯', title: 'Custom Goals', desc: 'Set your own calorie and macro targets based on your health goals.' },
         { icon: '📈', title: 'Progress History', desc: 'Track your nutrition over time with weekly and monthly summaries.' },
+        { icon: '✨', title: 'Moments', desc: 'Share photos of your meals and milestones, and react and reply to your friends’ posts.' },
+        { icon: '👥', title: 'Groups & Friends', desc: 'Follow friends, join groups, and chat one-on-one to keep each other accountable.' },
+        { icon: '🌍', title: '29 Languages', desc: 'The whole app speaks your language — and friends’ posts are translated automatically.' },
       ],
       pricing: {
         free: [
