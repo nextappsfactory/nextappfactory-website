@@ -79,7 +79,7 @@ export const tr: LegalTranslation = {
   },
   privacy: {
     title: 'Gizlilik Politikası',
-    updated: 'Son güncelleme: 18 Temmuz 2026',
+    updated: 'Son güncelleme: 19 Temmuz 2026',
     intro:
       'Next App Factory LLC tarafından işletilen Doyum AI ("biz", "bize", "Uygulama"), yemek fotoğraflarınızdan kalori ve makro tahminleri yaparak beslenmenizi takip etmenize yardımcı olur. Bu politika neleri, neden topladığımızı ve seçeneklerinizi açıklar.',
     sections: [
@@ -127,6 +127,12 @@ export const tr: LegalTranslation = {
         title: 'Verilerin saklanması ve silinmesi',
         body: [
           'Hesabınızı ve ilişkili verileri istediğiniz zaman Profil → Hesabı Sil üzerinden silebilirsiniz; bu işlem profilinizi ve verilerinizi bu cihazdan ve sunucularımızdan kaldırır. Silme talebinde bulunmak için bize e-posta da gönderebilirsiniz.',
+        ],
+      },
+      {
+        title: 'Yemek tanımayı geliştirme (isteğe bağlı)',
+        body: [
+          'Açıkça izin verirseniz (Ayarlar → Gizlilik), Doyum AI\'ın kendi yemek tanıma sistemini geliştirmek için taradığınız yemek fotoğraflarını ve yaptığınız düzeltmeleri saklarız. Bu özellik varsayılan olarak kapalıdır. İçinde insan olan fotoğraflar asla saklanmaz, 18 yaşından küçük kullanıcılar hariç tutulur ve bu fotoğraflar ile düzeltmeler veri dışa aktarımınıza dahil edilir, hesabınızla birlikte silinir. İstediğiniz zaman izninizi geri çekebilirsiniz; toplama derhal durur.',
         ],
       },
       {

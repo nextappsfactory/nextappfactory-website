@@ -21,7 +21,7 @@ export default function DoyumPrivacyPage({ searchParams }: { searchParams?: { la
       <section className="pt-36 pb-10 px-6 text-center">
         <Image src="/doyum/icon.png" alt="Doyum AI" width={56} height={56} className="mx-auto mb-5 rounded-[14px]" />
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{t ? t.privacy.title : 'Privacy Policy'}</h1>
-        <p className="text-gray-400 text-sm">Doyum AI · {t ? t.privacy.updated : 'Last updated July 18, 2026'}</p>
+        <p className="text-gray-400 text-sm">Doyum AI · {t ? t.privacy.updated : 'Last updated July 19, 2026'}</p>
         <div className="mt-4">
           <LanguagePicker active={t?.locale} />
         </div>
@@ -79,6 +79,11 @@ export default function DoyumPrivacyPage({ searchParams }: { searchParams?: { la
           <div>
             <h2 className="text-sm font-bold text-gray-900 mb-2">Data retention & deletion</h2>
             <p>You can delete your account and associated data at any time from <em>Profile → Delete Account</em>, which removes your profile and data from this device and our servers. You may also email us to request deletion.</p>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-bold text-gray-900 mb-2">Improving food recognition (optional)</h2>
+            <p>If you explicitly opt in (Settings → Privacy), we keep the meal photos you scan and the corrections you make so we can improve Doyum AI's own food recognition. This is off by default. Photos that contain people are never kept, users under 18 are excluded, and these photos and corrections are included in your data export and deleted with your account. You can withdraw at any time and collection stops immediately.</p>
           </div>
 
           <div>

@@ -79,7 +79,7 @@ export const es: LegalTranslation = {
   },
   privacy: {
     title: 'Política de Privacidad',
-    updated: 'Última actualización: 18 de julio de 2026',
+    updated: 'Última actualización: 19 de julio de 2026',
     intro:
       'Doyum AI («nosotros», la «App»), operada por Next App Factory LLC, le ayuda a hacer seguimiento de su nutrición estimando calorías y macronutrientes a partir de fotos de sus comidas. Esta política explica qué recopilamos, por qué y cuáles son sus opciones.',
     sections: [
@@ -127,6 +127,12 @@ export const es: LegalTranslation = {
         title: 'Conservación y eliminación de datos',
         body: [
           'Puede eliminar su cuenta y los datos asociados en cualquier momento desde Perfil → Eliminar cuenta, lo que elimina su perfil y sus datos de este dispositivo y de nuestros servidores. También puede solicitar la eliminación por correo electrónico.',
+        ],
+      },
+      {
+        title: 'Mejora del reconocimiento de comidas (opcional)',
+        body: [
+          'Si usted lo autoriza expresamente (Ajustes → Privacidad), conservamos las fotos de comidas que escanea y las correcciones que realiza para mejorar el reconocimiento de comidas propio de Doyum AI. Está desactivado de forma predeterminada. Las fotos con personas nunca se conservan, los usuarios menores de 18 años quedan excluidos, y estas fotos y correcciones se incluyen en su exportación de datos y se eliminan con su cuenta. Puede retirar su consentimiento en cualquier momento y la recopilación se detiene de inmediato.',
         ],
       },
       {

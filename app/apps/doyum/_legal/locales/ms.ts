@@ -79,7 +79,7 @@ export const ms: LegalTranslation = {
   },
   privacy: {
     title: 'Dasar Privasi',
-    updated: 'Kemas kini terakhir: 18 Julai 2026',
+    updated: 'Kemas kini terakhir: 19 Julai 2026',
     intro:
       'Doyum AI ("kami", "Aplikasi"), yang dikendalikan oleh Next App Factory LLC, membantu anda menjejaki pemakanan dengan menganggarkan kalori dan makronutrien daripada foto makanan anda. Dasar ini menerangkan apa yang kami kumpul, sebabnya, dan pilihan anda.',
     sections: [
@@ -127,6 +127,12 @@ export const ms: LegalTranslation = {
         title: 'Penyimpanan & pemadaman data',
         body: [
           'Anda boleh memadamkan akaun dan data berkaitan pada bila-bila masa melalui Profil → Padam Akaun, yang mengalih keluar profil dan data anda daripada peranti ini dan pelayan kami. Anda juga boleh menghantar e-mel kepada kami untuk memohon pemadaman.',
+        ],
+      },
+      {
+        title: 'Peningkatan pengecaman makanan (pilihan)',
+        body: [
+          'Jika anda bersetuju secara nyata (Tetapan → Privasi), kami menyimpan foto makanan yang anda imbas dan pembetulan yang anda buat untuk meningkatkan pengecaman makanan Doyum AI sendiri. Ciri ini dimatikan secara lalai. Foto yang mengandungi orang tidak sekali-kali disimpan, pengguna bawah 18 tahun dikecualikan, dan foto serta pembetulan ini termasuk dalam eksport data anda dan dipadamkan bersama akaun anda. Anda boleh menarik balik persetujuan pada bila-bila masa; pengumpulan berhenti serta-merta.',
         ],
       },
       {

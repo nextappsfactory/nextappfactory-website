@@ -79,7 +79,7 @@ export const vi: LegalTranslation = {
   },
   privacy: {
     title: 'Chính sách Quyền riêng tư',
-    updated: 'Cập nhật lần cuối: 18 tháng 7, 2026',
+    updated: 'Cập nhật lần cuối: 19 tháng 7, 2026',
     intro:
       'Doyum AI ("chúng tôi", "Ứng dụng"), do Next App Factory LLC vận hành, giúp bạn theo dõi dinh dưỡng bằng cách ước tính calo và các chất dinh dưỡng đa lượng từ ảnh bữa ăn của bạn. Chính sách này giải thích chúng tôi thu thập gì, vì sao, và các lựa chọn của bạn.',
     sections: [
@@ -127,6 +127,12 @@ export const vi: LegalTranslation = {
         title: 'Lưu trữ & xóa dữ liệu',
         body: [
           'Bạn có thể xóa tài khoản và dữ liệu liên quan bất cứ lúc nào tại Hồ sơ → Xóa tài khoản; thao tác này xóa hồ sơ và dữ liệu của bạn khỏi thiết bị này và máy chủ của chúng tôi. Bạn cũng có thể gửi email để yêu cầu xóa.',
+        ],
+      },
+      {
+        title: 'Cải thiện nhận diện món ăn (tùy chọn)',
+        body: [
+          'Nếu bạn đồng ý rõ ràng (Cài đặt → Quyền riêng tư), chúng tôi lưu ảnh bữa ăn bạn quét và các chỉnh sửa bạn thực hiện để cải thiện khả năng nhận diện món ăn của riêng Doyum AI. Tính năng này tắt theo mặc định. Ảnh có người không bao giờ được lưu, người dùng dưới 18 tuổi bị loại trừ, và những ảnh cùng chỉnh sửa này được đưa vào bản xuất dữ liệu của bạn và bị xóa cùng tài khoản. Bạn có thể rút lại sự đồng ý bất cứ lúc nào; việc thu thập dừng ngay lập tức.',
         ],
       },
       {

@@ -79,7 +79,7 @@ export const ro: LegalTranslation = {
   },
   privacy: {
     title: 'Politica de confidențialitate',
-    updated: 'Ultima actualizare: 18 iulie 2026',
+    updated: 'Ultima actualizare: 19 iulie 2026',
     intro:
       'Doyum AI („noi”, „Aplicația”), operată de Next App Factory LLC, vă ajută să vă monitorizați nutriția estimând caloriile și macronutrienții din fotografiile meselor dumneavoastră. Această politică explică ce colectăm, de ce și ce opțiuni aveți.',
     sections: [
@@ -127,6 +127,12 @@ export const ro: LegalTranslation = {
         title: 'Păstrarea și ștergerea datelor',
         body: [
           'Vă puteți șterge contul și datele asociate oricând din Profil → Șterge contul, ceea ce elimină profilul și datele de pe acest dispozitiv și de pe serverele noastre. Puteți solicita ștergerea și prin e-mail.',
+        ],
+      },
+      {
+        title: 'Îmbunătățirea recunoașterii mâncării (opțional)',
+        body: [
+          'Dacă vă exprimați explicit acordul (Setări → Confidențialitate), păstrăm fotografiile meselor pe care le scanați și corecturile pe care le faceți pentru a îmbunătăți recunoașterea mâncării proprie Doyum AI. Funcția este dezactivată implicit. Fotografiile cu persoane nu sunt păstrate niciodată, utilizatorii sub 18 ani sunt excluși, iar aceste fotografii și corecturi sunt incluse în exportul datelor dumneavoastră și șterse odată cu contul. Vă puteți retrage consimțământul oricând; colectarea se oprește imediat.',
         ],
       },
       {

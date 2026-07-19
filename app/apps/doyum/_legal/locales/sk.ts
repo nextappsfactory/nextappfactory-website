@@ -79,7 +79,7 @@ export const sk: LegalTranslation = {
   },
   privacy: {
     title: 'Zásady ochrany osobných údajov',
-    updated: 'Posledná aktualizácia: 18. júla 2026',
+    updated: 'Posledná aktualizácia: 19. júla 2026',
     intro:
       'Doyum AI („my“, „nás“, „Aplikácia“), prevádzkovaná spoločnosťou Next App Factory LLC, vám pomáha sledovať výživu odhadom kalórií a makroživín z fotografií vašich jedál. Tieto zásady vysvetľujú, čo zhromažďujeme, prečo a aké máte možnosti.',
     sections: [
@@ -127,6 +127,12 @@ export const sk: LegalTranslation = {
         title: 'Uchovávanie a vymazanie údajov',
         body: [
           'Svoj účet a súvisiace údaje môžete kedykoľvek vymazať v Profil → Vymazať účet; tým sa váš profil a údaje odstránia z tohto zariadenia aj z našich serverov. O vymazanie môžete požiadať aj e-mailom.',
+        ],
+      },
+      {
+        title: 'Zlepšovanie rozpoznávania jedál (voliteľné)',
+        body: [
+          'Ak výslovne súhlasíte (Nastavenia → Súkromie), uchovávame fotografie jedál, ktoré skenujete, a opravy, ktoré robíte, aby sme zlepšovali vlastné rozpoznávanie jedál Doyum AI. Predvolene je táto funkcia vypnutá. Fotografie s ľuďmi sa nikdy neuchovávajú, používatelia mladší ako 18 rokov sú vylúčení a tieto fotografie a opravy sú súčasťou exportu vašich údajov a vymažú sa s vaším účtom. Súhlas môžete kedykoľvek odvolať — zber sa okamžite zastaví.',
         ],
       },
       {

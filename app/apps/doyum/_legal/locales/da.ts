@@ -79,7 +79,7 @@ export const da: LegalTranslation = {
   },
   privacy: {
     title: 'Privatlivspolitik',
-    updated: 'Senest opdateret: 18. juli 2026',
+    updated: 'Senest opdateret: 19. juli 2026',
     intro:
       'Doyum AI ("vi", "os", "Appen"), der drives af Next App Factory LLC, hjælper dig med at følge din ernæring ved at estimere kalorier og makronæringsstoffer ud fra billeder af dine måltider. Denne politik forklarer, hvad vi indsamler, hvorfor, og hvilke valg du har.',
     sections: [
@@ -127,6 +127,12 @@ export const da: LegalTranslation = {
         title: 'Opbevaring og sletning af data',
         body: [
           'Du kan til enhver tid slette din konto og tilknyttede data via Profil → Slet konto, hvilket fjerner din profil og dine data fra denne enhed og vores servere. Du kan også anmode om sletning via e-mail.',
+        ],
+      },
+      {
+        title: 'Forbedring af madgenkendelsen (valgfrit)',
+        body: [
+          'Hvis du udtrykkeligt giver samtykke (Indstillinger → Privatliv), gemmer vi de madbilleder, du scanner, og de rettelser, du foretager, for at forbedre Doyum AI\'s egen madgenkendelse. Dette er slået fra som standard. Billeder med personer gemmes aldrig, brugere under 18 år er udelukket, og disse billeder og rettelser indgår i din dataeksport og slettes sammen med din konto. Du kan til enhver tid trække dit samtykke tilbage; indsamlingen stopper med det samme.',
         ],
       },
       {
