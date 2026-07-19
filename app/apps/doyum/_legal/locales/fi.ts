@@ -79,7 +79,7 @@ export const fi: LegalTranslation = {
   },
   privacy: {
     title: 'Tietosuojakäytäntö',
-    updated: 'Viimeksi päivitetty: 18. heinäkuuta 2026',
+    updated: 'Viimeksi päivitetty: 19. heinäkuuta 2026',
     intro:
       'Next App Factory LLC:n ylläpitämä Doyum AI ("me", "Sovellus") auttaa sinua seuraamaan ravitsemustasi arvioimalla kalorit ja makroravinteet aterioittesi kuvista. Tämä käytäntö kertoo, mitä keräämme, miksi ja mitkä ovat vaihtoehtosi.',
     sections: [
@@ -127,6 +127,12 @@ export const fi: LegalTranslation = {
         title: 'Tietojen säilyttäminen ja poistaminen',
         body: [
           'Voit poistaa tilisi ja siihen liittyvät tiedot milloin tahansa kohdasta Profiili → Poista tili; tämä poistaa profiilisi ja tietosi tältä laitteelta ja palvelimiltamme. Voit myös pyytää poistoa sähköpostitse.',
+        ],
+      },
+      {
+        title: 'Ruoantunnistuksen parantaminen (valinnainen)',
+        body: [
+          'Jos annat nimenomaisen suostumuksen (Asetukset → Tietosuoja), säilytämme skannaamasi ateriakuvat ja tekemäsi korjaukset parantaaksemme Doyum AI:n omaa ruoantunnistusta. Tämä on oletuksena pois päältä. Kuvia, joissa on ihmisiä, ei koskaan säilytetä, alle 18-vuotiaat käyttäjät on suljettu pois, ja nämä kuvat ja korjaukset sisältyvät tietojesi vientiin ja poistetaan tilisi mukana. Voit peruuttaa suostumuksesi milloin tahansa; kerääminen loppuu välittömästi.',
         ],
       },
       {

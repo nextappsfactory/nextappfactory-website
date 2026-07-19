@@ -79,7 +79,7 @@ export const nl: LegalTranslation = {
   },
   privacy: {
     title: 'Privacybeleid',
-    updated: 'Laatst bijgewerkt: 18 juli 2026',
+    updated: 'Laatst bijgewerkt: 19 juli 2026',
     intro:
       'Doyum AI ("wij", "ons", de "App"), geëxploiteerd door Next App Factory LLC, helpt u uw voeding bij te houden door calorieën en macronutriënten te schatten op basis van foto\'s van uw maaltijden. Dit beleid legt uit wat wij verzamelen, waarom, en welke keuzes u heeft.',
     sections: [
@@ -127,6 +127,12 @@ export const nl: LegalTranslation = {
         title: 'Bewaring en verwijdering van gegevens',
         body: [
           'U kunt uw account en bijbehorende gegevens op elk moment verwijderen via Profiel → Account verwijderen; dit verwijdert uw profiel en gegevens van dit apparaat en van onze servers. U kunt verwijdering ook per e-mail aanvragen.',
+        ],
+      },
+      {
+        title: 'Verbetering van maaltijdherkenning (optioneel)',
+        body: [
+          'Als u hier uitdrukkelijk mee instemt (Instellingen → Privacy), bewaren wij de maaltijdfoto\'s die u scant en de correcties die u aanbrengt om de eigen maaltijdherkenning van Doyum AI te verbeteren. Dit staat standaard uit. Foto\'s met personen worden nooit bewaard, gebruikers onder de 18 jaar zijn uitgesloten, en deze foto\'s en correcties zitten in uw gegevensexport en worden met uw account verwijderd. U kunt uw toestemming op elk moment intrekken; de verzameling stopt onmiddellijk.',
         ],
       },
       {

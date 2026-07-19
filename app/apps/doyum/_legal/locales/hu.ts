@@ -79,7 +79,7 @@ export const hu: LegalTranslation = {
   },
   privacy: {
     title: 'Adatvédelmi tájékoztató',
-    updated: 'Utolsó frissítés: 2026. július 18.',
+    updated: 'Utolsó frissítés: 2026. július 19.',
     intro:
       'A Next App Factory LLC által üzemeltetett Doyum AI („mi”, az „Alkalmazás”) az ételeiről készült fotók alapján becsüli meg a kalóriákat és makrotápanyagokat, segítve táplálkozása nyomon követését. Ez a tájékoztató bemutatja, mit gyűjtünk, miért, és milyen választási lehetőségei vannak.',
     sections: [
@@ -127,6 +127,12 @@ export const hu: LegalTranslation = {
         title: 'Adatmegőrzés és -törlés',
         body: [
           'Fiókját és a kapcsolódó adatokat bármikor törölheti a Profil → Fiók törlése menüpontban; ez eltávolítja profilját és adatait erről az eszközről és szervereinkről. Törlést e-mailben is kérhet.',
+        ],
+      },
+      {
+        title: 'Az ételfelismerés fejlesztése (opcionális)',
+        body: [
+          'Ha kifejezetten hozzájárul (Beállítások → Adatvédelem), megőrizzük a beszkennelt ételfotóit és az Ön által végzett javításokat, hogy fejlesszük a Doyum AI saját ételfelismerését. Ez alapértelmezés szerint ki van kapcsolva. Embereket tartalmazó fotókat soha nem őrzünk meg, a 18 év alatti felhasználók ki vannak zárva, és ezek a fotók és javítások szerepelnek az adatexportjában, valamint fiókjával együtt törlődnek. Hozzájárulását bármikor visszavonhatja; a gyűjtés azonnal leáll.',
         ],
       },
       {
