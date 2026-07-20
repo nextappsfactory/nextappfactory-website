@@ -8,26 +8,11 @@ const SUBDOMAIN_MAP: Record<string, string> = {
   tvremote: '/apps/tvremote',
 }
 
-// Hosts whose site moved to its own domain; redirect and preserve the path
-// (doyumai.nextappfactory.com is the App Store privacy/support URL for Doyum)
-const REDIRECT_MAP: Record<string, string> = {
-  'doyumai.nextappfactory.com': 'https://doyum.ai',
-  'doyum.ai': 'https://doyum.ai',
-  'www.doyum.ai': 'https://doyum.ai',
-}
-
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get('x-forwarded-host') || request.headers.get('host') || ''
 
   // Strip port for local dev (e.g. stocklens.localhost:3000)
   const hostWithoutPort = hostname.split(':')[0]
-
-  if (REDIRECT_MAP[hostWithoutPort]) {
-    const target = new URL(REDIRECT_MAP[hostWithoutPort])
-    target.pathname = request.nextUrl.pathname
-    target.search = request.nextUrl.search
-    return NextResponse.redirect(target, 308)
-  }
 
   // Extract subdomain
   // Handles: stocklens.nextappfactory.com and stocklens.localhost
